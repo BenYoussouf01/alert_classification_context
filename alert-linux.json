@@ -1,0 +1,1827 @@
+[  {
+    "_index": "wazuh-alerts-4.x-2025.09.09",
+    "_id": "WEcXMJkBIDwfn7_zSKLH",
+    "_score": null,
+    "_source": {
+      "predecoder": {
+        "hostname": "localhost.localdomain",
+        "program_name": "chpasswd",
+        "timestamp": "Sep 09 20:07:29"
+      },
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.103",
+        "name": "localhost.localdomain",
+        "id": "002"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "dstuser": "ARTUser"
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": false,
+        "level": 3,
+        "pci_dss": [
+          "8.1.2",
+          "10.2.5"
+        ],
+        "hipaa": [
+          "164.312.a.2.I",
+          "164.312.a.2.II",
+          "164.312.b"
+        ],
+        "tsc": [
+          "CC6.8",
+          "CC7.2",
+          "CC7.3"
+        ],
+        "description": "PAM: User changed password.",
+        "groups": [
+          "pam",
+          "syslog"
+        ],
+        "id": "5555",
+        "nist_800_53": [
+          "AC.2",
+          "IA.4",
+          "AU.14",
+          "AC.7"
+        ],
+        "gpg13": [
+          "4.13",
+          "7.10"
+        ],
+        "gdpr": [
+          "IV_35.7.d",
+          "IV_32.2"
+        ]
+      },
+      "location": "journald",
+      "decoder": {
+        "parent": "pam",
+        "name": "pam"
+      },
+      "id": "1757448450.1607664",
+      "full_log": "Sep 09 20:07:29 localhost.localdomain chpasswd[178273]: pam_unix(chpasswd:chauthtok): password changed for ARTUser",
+      "timestamp": "2025-09-09T20:07:30.357+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-09T20:07:30.357Z"
+      ]
+    },
+    "sort": [
+      1757448450357
+    ]
+  }
+,
+  {
+  "_index": "wazuh-alerts-4.x-2025.09.09",
+  "_id": "4kd9LpkBIDwfn7_zdqCx",
+  "_score": 1,
+  "_source": {
+    "predecoder": {
+      "hostname": "localhost.localdomain",
+      "program_name": "sudo",
+      "timestamp": "Sep 09 12:39:49"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "data": {
+      "dstuser": "root"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 3,
+      "pci_dss": [
+        "10.2.5"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "PAM: Login session closed.",
+      "groups": [
+        "pam",
+        "syslog"
+      ],
+      "id": "5502",
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "gpg13": [
+        "7.8",
+        "7.9"
+      ],
+      "gdpr": [
+        "IV_32.2"
+      ]
+    },
+    "decoder": {
+      "parent": "pam",
+      "name": "pam"
+    },
+    "full_log": "Sep 09 12:39:49 localhost.localdomain sudo[171876]: pam_unix(sudo:session): session closed for user root",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2025-09-09T12:39:51.900Z",
+    "location": "journald",
+    "id": "1757421591.908968",
+    "timestamp": "2025-09-09T12:39:51.900+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-09-09T12:39:51.900Z"
+    ],
+    "@timestamp": [
+      "2025-09-09T12:39:51.900Z"
+    ]
+  }
+  },
+  {
+  "_index": "wazuh-alerts-4.x-2025.09.09",
+  "_id": "4Ud9LpkBIDwfn7_zdqCx",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "localhost.localdomain",
+      "program_name": "sudo",
+      "timestamp": "Sep 09 12:39:49"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "data": {
+      "srcuser": "env-admin",
+      "uid": "0",
+      "dstuser": "root(uid=0)"
+    },
+    "rule": {
+      "mail": false,
+      "level": 3,
+      "pci_dss": [
+        "10.2.5"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "PAM: Login session opened.",
+      "groups": [
+        "pam",
+        "syslog",
+        "authentication_success"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "gdpr": [
+        "IV_32.2"
+      ],
+      "firedtimes": 2,
+      "mitre": {
+        "technique": [
+          "Valid Accounts"
+        ],
+        "id": [
+          "T1078"
+        ],
+        "tactic": [
+          "Defense Evasion",
+          "Persistence",
+          "Privilege Escalation",
+          "Initial Access"
+        ]
+      },
+      "id": "5501",
+      "gpg13": [
+        "7.8",
+        "7.9"
+      ]
+    },
+    "location": "journald",
+    "decoder": {
+      "parent": "pam",
+      "name": "pam"
+    },
+    "id": "1757421591.908504",
+    "full_log": "Sep 09 12:39:49 localhost.localdomain sudo[171876]: pam_unix(sudo:session): session opened for user root(uid=0) by env-admin(uid=0)",
+    "timestamp": "2025-09-09T12:39:51.899+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-09-09T12:39:51.899Z"
+    ]
+  },
+  "sort": [
+    1757421591899
+  ]
+},
+{
+  "_index": "wazuh-alerts-4.x-2025.09.09",
+  "_id": "4kd9LpkBIDwfn7_zdqCx",
+  "_score": 1,
+  "_source": {
+    "predecoder": {
+      "hostname": "localhost.localdomain",
+      "program_name": "sudo",
+      "timestamp": "Sep 09 12:39:49"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "data": {
+      "dstuser": "root"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 3,
+      "pci_dss": [
+        "10.2.5"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "PAM: Login session closed.",
+      "groups": [
+        "pam",
+        "syslog"
+      ],
+      "id": "5502",
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "gpg13": [
+        "7.8",
+        "7.9"
+      ],
+      "gdpr": [
+        "IV_32.2"
+      ]
+    },
+    "decoder": {
+      "parent": "pam",
+      "name": "pam"
+    },
+    "full_log": "Sep 09 12:39:49 localhost.localdomain sudo[171876]: pam_unix(sudo:session): session closed for user root",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2025-09-09T12:39:51.900Z",
+    "location": "journald",
+    "id": "1757421591.908968",
+    "timestamp": "2025-09-09T12:39:51.900+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-09-09T12:39:51.900Z"
+    ],
+    "@timestamp": [
+      "2025-09-09T12:39:51.900Z"
+    ]
+  }
+},
+
+{
+  "_index": "wazuh-alerts-4.x-2025.09.09",
+  "_id": "4Ud9LpkBIDwfn7_zdqCx",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "localhost.localdomain",
+      "program_name": "sudo",
+      "timestamp": "Sep 09 12:39:49"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "data": {
+      "srcuser": "env-admin",
+      "uid": "0",
+      "dstuser": "root(uid=0)"
+    },
+    "rule": {
+      "mail": false,
+      "level": 3,
+      "pci_dss": [
+        "10.2.5"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "PAM: Login session opened.",
+      "groups": [
+        "pam",
+        "syslog",
+        "authentication_success"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "gdpr": [
+        "IV_32.2"
+      ],
+      "firedtimes": 2,
+      "mitre": {
+        "technique": [
+          "Valid Accounts"
+        ],
+        "id": [
+          "T1078"
+        ],
+        "tactic": [
+          "Defense Evasion",
+          "Persistence",
+          "Privilege Escalation",
+          "Initial Access"
+        ]
+      },
+      "id": "5501",
+      "gpg13": [
+        "7.8",
+        "7.9"
+      ]
+    },
+    "location": "journald",
+    "decoder": {
+      "parent": "pam",
+      "name": "pam"
+    },
+    "id": "1757421591.908504",
+    "full_log": "Sep 09 12:39:49 localhost.localdomain sudo[171876]: pam_unix(sudo:session): session opened for user root(uid=0) by env-admin(uid=0)",
+    "timestamp": "2025-09-09T12:39:51.899+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-09-09T12:39:51.899Z"
+    ]
+  },
+  "sort": [
+    1757421591899
+  ]
+},
+
+
+{
+  "_index": "wazuh-alerts-4.x-2025.09.09",
+  "_id": "v0eQL5kBIDwfn7_zFqHo",
+  "_score": null,
+  "_source": {
+    "syscheck": {
+      "size_before": "23",
+      "uname_after": "root",
+      "mtime_after": "2025-09-09T05:43:11",
+      "inode_before": 1470,
+      "size_after": "45",
+      "gid_after": "0",
+      "md5_before": "0708d0624716a39ea936028fdc3d6bfa",
+      "sha256_before": "2d9b5ce1fa16ec6fb4da7e8484618dff7ba14b1dcba0ce9a7beb7c789c717978",
+      "mtime_before": "2022-08-26T19:50:00",
+      "mode": "scheduled",
+      "path": "/etc/subuid",
+      "sha1_after": "47956eb53a03577dc36685966ec6f5f77a8858cf",
+      "changed_attributes": [
+        "size",
+        "inode",
+        "mtime",
+        "md5",
+        "sha1",
+        "sha256"
+      ],
+      "gname_after": "root",
+      "uid_after": "0",
+      "perm_after": "rw-r--r--",
+      "event": "modified",
+      "md5_after": "c61e17cacc032a9ecc702191c747388e",
+      "sha1_before": "e8f28eda46e994dcdee27210af79666f43fc519e",
+      "sha256_after": "6422ee55b380ece110b6e8cd185c6012569f57fb4c7f5ec1b18da9502eec61f3",
+      "inode_after": 1921
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "rule": {
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "11.5"
+      ],
+      "hipaa": [
+        "164.312.c.1",
+        "164.312.c.2"
+      ],
+      "tsc": [
+        "PI1.4",
+        "PI1.5",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "Integrity checksum changed.",
+      "groups": [
+        "ossec",
+        "syscheck",
+        "syscheck_entry_modified",
+        "syscheck_file"
+      ],
+      "nist_800_53": [
+        "SI.7"
+      ],
+      "gdpr": [
+        "II_5.1.f"
+      ],
+      "firedtimes": 22,
+      "mitre": {
+        "technique": [
+          "Stored Data Manipulation"
+        ],
+        "id": [
+          "T1565.001"
+        ],
+        "tactic": [
+          "Impact"
+        ]
+      },
+      "id": "550",
+      "gpg13": [
+        "4.11"
+      ]
+    },
+    "location": "syscheck",
+    "decoder": {
+      "name": "syscheck_integrity_changed"
+    },
+    "id": "1757439593.1276633",
+    "full_log": "File '/etc/subuid' modified\nMode: scheduled\nChanged attributes: size,inode,mtime,md5,sha1,sha256\nSize changed from '23' to '45'\nOld modification time was: '1661543400', now it is '1757396591'\nOld inode was: '1470', now it is '1921'\nOld md5sum was: '0708d0624716a39ea936028fdc3d6bfa'\nNew md5sum is : 'c61e17cacc032a9ecc702191c747388e'\nOld sha1sum was: 'e8f28eda46e994dcdee27210af79666f43fc519e'\nNew sha1sum is : '47956eb53a03577dc36685966ec6f5f77a8858cf'\nOld sha256sum was: '2d9b5ce1fa16ec6fb4da7e8484618dff7ba14b1dcba0ce9a7beb7c789c717978'\nNew sha256sum is : '6422ee55b380ece110b6e8cd185c6012569f57fb4c7f5ec1b18da9502eec61f3'\n",
+    "timestamp": "2025-09-09T17:39:53.379+0000"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2025-09-09T05:43:11.000Z"
+    ],
+    "syscheck.mtime_before": [
+      "2022-08-26T19:50:00.000Z"
+    ],
+    "timestamp": [
+      "2025-09-09T17:39:53.379Z"
+    ]
+  },
+  "sort": [
+    1757439593379
+  ]
+},
+
+
+{
+  "_index": "wazuh-alerts-4.x-2025.09.09",
+  "_id": "okeKL5kBIDwfn7_zn6Gx",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "data": {
+      "sca": {
+        "scan_id": "1453389337",
+        "check": {
+          "result": "passed",
+          "remediation": "Run the following command to create a table in nftables # nft create table inet <table name> Example: # nft create table inet filter.",
+          "previous_result": "failed",
+          "compliance": {
+            "pci_dss_v4": {
+              "0": "1.2.1,1.4.1"
+            },
+            "cis_csc_v8": "4.4,4.5",
+            "soc_2": "CC6.6",
+            "pci_dss_v3": {
+              "2": {
+                "1": "1.1.4,1.3.1,1.4"
+              }
+            },
+            "nist_sp_800-53": "SC-7(5)",
+            "mitre_tactics": "TA0011",
+            "mitre_techniques": "T1562,T1562.004",
+            "cis": "4.2.4",
+            "cmmc_v2": {
+              "0": "AC.L1-3.1.20,CM.L2-3.4.7,SC.L1-3.13.1,SC.L2-3.13.6"
+            },
+            "iso_27001-2013": "A.13.1.1",
+            "cis_csc_v7": "9.4",
+            "mitre_mitigations": "M1047"
+          },
+          "description": "Tables hold chains. Each table only has one address family and only applies to packets of this family. Tables can have one of five families.",
+          "id": "28579",
+          "title": "Ensure a nftables table exists.",
+          "rationale": "nftables doesn't have any default tables. Without a table being build, nftables will not filter network traffic.",
+          "command": [
+            "nft list tables"
+          ]
+        },
+        "type": "check",
+        "policy": "CIS Ubuntu Linux 22.04 LTS Benchmark v2.0.0."
+      }
+    },
+    "rule": {
+      "cis_csc_v8": [
+        "4.4",
+        "4.5"
+      ],
+      "mail": false,
+      "level": 3,
+      "pci_dss": [
+        "2.2"
+      ],
+      "tsc": [
+        "CC7.1",
+        "CC7.2"
+      ],
+      "nist_sp_800-53": [
+        "SC-7(5)"
+      ],
+      "description": "CIS Ubuntu Linux 22.04 LTS Benchmark v2.0.0.: Ensure a nftables table exists.: Status changed from failed to passed",
+      "groups": [
+        "sca"
+      ],
+      "mitre_tactics": [
+        "TA0011"
+      ],
+      "mitre_techniques": [
+        "T1562",
+        "T1562.004"
+      ],
+      "cis": [
+        "4.2.4"
+      ],
+      "iso_27001-2013": [
+        "A.13.1.1"
+      ],
+      "nist_800_53": [
+        "CM.1"
+      ],
+      "mitre_mitigations": [
+        "M1047"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "firedtimes": 1,
+      "soc_2": [
+        "CC6.6"
+      ],
+      "id": "19010",
+      "cis_csc_v7": [
+        "9.4"
+      ]
+    },
+    "location": "sca",
+    "decoder": {
+      "name": "sca"
+    },
+    "id": "1757439233.1227872",
+    "timestamp": "2025-09-09T17:33:53.287+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-09-09T17:33:53.287Z"
+    ]
+  },
+  "sort": [
+    1757439233287
+  ]
+},
+
+{
+  "_index": "wazuh-alerts-4.x-2025.09.09",
+  "_id": "fUcALZkBIDwfn7_zDp9j",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "localhost.localdomain",
+      "program_name": "useradd",
+      "timestamp": "Sep 09 05:43:11"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 8,
+      "pci_dss": [
+        "10.2.7",
+        "10.2.5",
+        "8.1.2"
+      ],
+      "hipaa": [
+        "164.312.b",
+        "164.312.a.2.I",
+        "164.312.a.2.II"
+      ],
+      "tsc": [
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "New group added to the system.",
+      "groups": [
+        "syslog",
+        "adduser"
+      ],
+      "id": "5901",
+      "nist_800_53": [
+        "AU.14",
+        "AC.7",
+        "AC.2",
+        "IA.4"
+      ],
+      "gpg13": [
+        "4.13"
+      ],
+      "gdpr": [
+        "IV_35.7.d",
+        "IV_32.2"
+      ]
+    },
+    "location": "journald",
+    "decoder": {
+      "name": "useradd"
+    },
+    "id": "1757396591.314337",
+    "full_log": "Sep 09 05:43:11 localhost.localdomain useradd[165214]: new group: name=testuser, GID=1001",
+    "timestamp": "2025-09-09T05:43:11.492+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-09-09T05:43:11.492Z"
+    ]
+  },
+  "sort": [
+    1757396591492
+  ]
+},
+
+{
+  "_index": "wazuh-alerts-4.x-2025.09.09",
+  "_id": "LEehLJkBIDwfn7_zk58H",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "localhost.localdomain",
+      "program_name": "kernel",
+      "timestamp": "Sep 09 04:00:03"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "data": {
+      "extra_data": "capable",
+      "status": "DENIED"
+    },
+    "rule": {
+      "firedtimes": 2,
+      "mail": false,
+      "level": 3,
+      "description": "Apparmor DENIED",
+      "groups": [
+        "local",
+        "syslog",
+        "apparmor"
+      ],
+      "id": "52002"
+    },
+    "location": "journald",
+    "decoder": {
+      "parent": "kernel",
+      "name": "kernel"
+    },
+    "id": "1757390403.187211",
+    "full_log": "Sep 09 04:00:03 localhost.localdomain kernel: audit: type=1400 audit(1757390403.223:85): apparmor=\"DENIED\" operation=\"capable\" profile=\"/usr/sbin/cups-browsed\" pid=163829 comm=\"cups-browsed\" capability=23  capname=\"sys_nice\"",
+    "timestamp": "2025-09-09T04:00:03.421+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-09-09T04:00:03.421Z"
+    ]
+  },
+  "sort": [
+    1757390403421
+  ]
+},
+
+{
+  "_index": "wazuh-alerts-4.x-2025.09.09",
+  "_id": "vUeQL5kBIDwfn7_zFKFw",
+  "_score": null,
+  "_source": {
+    "syscheck": {
+      "uname_after": "root",
+      "mtime_after": "2025-09-09T05:42:36",
+      "size_after": "105",
+      "gid_after": "0",
+      "mode": "scheduled",
+      "path": "/etc/cron.d/persistevil",
+      "sha1_after": "4cb59e2251137751d350551d3002fefd3acc5dc0",
+      "gname_after": "root",
+      "uid_after": "0",
+      "perm_after": "rw-r--r--",
+      "event": "added",
+      "md5_after": "c850b02c90ef8d443aaa6cd8e47bf5b1",
+      "sha256_after": "0857bd0fc57f072a1b81da6ae506477dbdf2e56de469ab7e870286adc36c1270",
+      "inode_after": 2065
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 5,
+      "pci_dss": [
+        "11.5"
+      ],
+      "hipaa": [
+        "164.312.c.1",
+        "164.312.c.2"
+      ],
+      "tsc": [
+        "PI1.4",
+        "PI1.5",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "File added to the system.",
+      "groups": [
+        "ossec",
+        "syscheck",
+        "syscheck_entry_added",
+        "syscheck_file"
+      ],
+      "id": "554",
+      "nist_800_53": [
+        "SI.7"
+      ],
+      "gpg13": [
+        "4.11"
+      ],
+      "gdpr": [
+        "II_5.1.f"
+      ]
+    },
+    "location": "syscheck",
+    "decoder": {
+      "name": "syscheck_integrity_changed"
+    },
+    "id": "1757439593.1274699",
+    "full_log": "File '/etc/cron.d/persistevil' added\nMode: scheduled\n",
+    "timestamp": "2025-09-09T17:39:53.342+0000"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2025-09-09T05:42:36.000Z"
+    ],
+    "timestamp": [
+      "2025-09-09T17:39:53.342Z"
+    ]
+  },
+  "sort": [
+    1757439593342
+  ]
+},
+
+{
+  "_index": "wazuh-alerts-4.x-2025.09.08",
+  "_id": "CkdnJ5kBIDwfn7_z_5tf",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "localhost.localdomain",
+      "program_name": "systemd",
+      "timestamp": "Sep 08 03:38:58"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 5,
+      "description": "Systemd: Service exited due to a failure.",
+      "groups": [
+        "local",
+        "systemd"
+      ],
+      "id": "40704",
+      "gpg13": [
+        "4.3"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "location": "journald",
+    "decoder": {
+      "name": "systemd"
+    },
+    "id": "1757302739.245548",
+    "full_log": "Sep 08 03:38:58 localhost.localdomain systemd[1]: fwupd-refresh.service: Main process exited, code=exited, status=1/FAILURE",
+    "timestamp": "2025-09-08T03:38:59.192+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-09-08T03:38:59.192Z"
+    ]
+  },
+  "sort": [
+    1757302739192
+  ]
+},
+
+{
+  "_index": "wazuh-alerts-4.x-2025.09.09",
+  "_id": "VkcXMJkBIDwfn7_zSKLH",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "localhost.localdomain",
+      "program_name": "sudo",
+      "timestamp": "Sep 09 20:07:29"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "data": {
+      "srcuser": "root",
+      "dstuser": "root",
+      "tty": "pts/3",
+      "pwd": "/home/env-admin",
+      "command": "/usr/sbin/chpasswd"
+    },
+    "rule": {
+      "mail": false,
+      "level": 3,
+      "pci_dss": [
+        "10.2.5",
+        "10.2.2"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "Successful sudo to ROOT executed.",
+      "groups": [
+        "syslog",
+        "sudo"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7",
+        "AC.6"
+      ],
+      "gdpr": [
+        "IV_32.2"
+      ],
+      "firedtimes": 2,
+      "mitre": {
+        "technique": [
+          "Sudo and Sudo Caching"
+        ],
+        "id": [
+          "T1548.003"
+        ],
+        "tactic": [
+          "Privilege Escalation",
+          "Defense Evasion"
+        ]
+      },
+      "id": "5402",
+      "gpg13": [
+        "7.6",
+        "7.8",
+        "7.13"
+      ]
+    },
+    "location": "journald",
+    "decoder": {
+      "parent": "sudo",
+      "name": "sudo",
+      "ftscomment": "First time user executed the sudo command"
+    },
+    "id": "1757448450.1606656",
+    "full_log": "Sep 09 20:07:29 localhost.localdomain sudo[178271]:     root : TTY=pts/3 ; PWD=/home/env-admin ; USER=root ; COMMAND=/usr/sbin/chpasswd",
+    "timestamp": "2025-09-09T20:07:30.351+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-09-09T20:07:30.351Z"
+    ]
+  },
+  "sort": [
+    1757448450351
+  ]
+},
+
+{
+  "_index": "wazuh-alerts-4.x-2025.09.09",
+  "_id": "VEcXMJkBIDwfn7_zSKLH",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "localhost.localdomain",
+      "program_name": "useradd",
+      "timestamp": "Sep 09 20:07:29"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "data": {
+      "uid": "1002",
+      "gid": "1002",
+      "shell": "/bin/sh,",
+      "dstuser": "ARTUser",
+      "home": "/home/ARTUser"
+    },
+    "rule": {
+      "mail": false,
+      "level": 8,
+      "pci_dss": [
+        "10.2.7",
+        "10.2.5",
+        "8.1.2"
+      ],
+      "hipaa": [
+        "164.312.b",
+        "164.312.a.2.I",
+        "164.312.a.2.II"
+      ],
+      "tsc": [
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "New user added to the system.",
+      "groups": [
+        "syslog",
+        "adduser"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7",
+        "AC.2",
+        "IA.4"
+      ],
+      "gdpr": [
+        "IV_35.7.d",
+        "IV_32.2"
+      ],
+      "firedtimes": 1,
+      "mitre": {
+        "technique": [
+          "Create Account"
+        ],
+        "id": [
+          "T1136"
+        ],
+        "tactic": [
+          "Persistence"
+        ]
+      },
+      "id": "5902",
+      "gpg13": [
+        "4.13"
+      ]
+    },
+    "location": "journald",
+    "decoder": {
+      "parent": "useradd",
+      "name": "useradd"
+    },
+    "id": "1757448450.1605639",
+    "full_log": "Sep 09 20:07:29 localhost.localdomain useradd[178262]: new user: name=ARTUser, UID=1002, GID=1002, home=/home/ARTUser, shell=/bin/sh, from=none",
+    "timestamp": "2025-09-09T20:07:30.351+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-09-09T20:07:30.351Z"
+    ]
+  },
+  "sort": [
+    1757448450351
+  ]
+},
+
+{
+  "_index": "wazuh-alerts-4.x-2025.09.09",
+  "_id": "pEeKL5kBIDwfn7_ztKG3",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "data": {
+      "sca": {
+        "score": "44",
+        "total_checks": "207",
+        "file": "cis_ubuntu22-04.yml",
+        "policy_id": "cis_ubuntu22-04",
+        "invalid": "11",
+        "description": "This document provides prescriptive guidance for establishing a secure configuration posture for Ubuntu Linux 22.04 LTS based on CIS benchmark for Ubuntu Linux 22.04 LTS.",
+        "scan_id": "1453389337",
+        "passed": "87",
+        "failed": "109",
+        "type": "summary",
+        "policy": "CIS Ubuntu Linux 22.04 LTS Benchmark v2.0.0."
+      }
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "2.2"
+      ],
+      "tsc": [
+        "CC7.1",
+        "CC7.2"
+      ],
+      "description": "SCA summary: CIS Ubuntu Linux 22.04 LTS Benchmark v2.0.0.: Score less than 50% (44)",
+      "groups": [
+        "sca"
+      ],
+      "id": "19004",
+      "nist_800_53": [
+        "CM.1"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "location": "sca",
+    "decoder": {
+      "name": "sca"
+    },
+    "id": "1757439237.1234145",
+    "timestamp": "2025-09-09T17:33:57.036+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-09-09T17:33:57.036Z"
+    ]
+  },
+  "sort": [
+    1757439237036
+  ]
+},
+
+{
+  "_index": "wazuh-alerts-4.x-2025.09.03",
+  "_id": "2lK2EJkB34qfocTBfYTJ",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "data": {
+      "sca": {
+        "scan_id": "272806583",
+        "check": {
+          "result": "failed",
+          "remediation": "Run the following commands to remove excess permissions, set owner, and set group on /etc/shells: # chmod u-x,go-wx /etc/shells # chown root:root /etc/shells.",
+          "compliance": {
+            "cis_csc_v8": "3.3",
+            "hipaa": "164.308(a)(3)(i),164.308(a)(3)(ii)(A),164.312(a)(1)",
+            "nist_sp_800-53": "AC-5,AC-6",
+            "mitre_tactics": "TA0005",
+            "mitre_techniques": "T1003,T1003.008,T1222,T1222.002",
+            "cis": "7.1.9",
+            "cmmc_v2": {
+              "0": "AC.L1-3.1.1,AC.L1-3.1.2,AC.L2-3.1.3,AC.L2-3.1.5,MP.L2-3.8.2"
+            },
+            "iso_27001-2013": "A.9.1.1",
+            "mitre_mitigations": "M1022",
+            "pci_dss_v4": {
+              "0": "1.3.1,7.1"
+            },
+            "soc_2": "CC5.2,CC6.1",
+            "pci_dss_v3": {
+              "2": {
+                "1": "7.1,7.1.1,7.1.2,7.1.3"
+              }
+            },
+            "cis_csc_v7": "14.6"
+          },
+          "description": "/etc/shells is a text file which contains the full pathnames of valid login shells. This file is consulted by chsh and available to be queried by other programs.",
+          "id": "28750",
+          "title": "Ensure permissions on /etc/shells are configured.",
+          "rationale": "It is critical to ensure that the /etc/shells file is protected from unauthorized access. Although it is protected by default, the file permissions could be changed either inadvertently or through malicious actions.",
+          "command": [
+            "stat -Lc \"%n %a %u %U %g %G\" /etc/shells-"
+            ]
+        },
+        "type": "check",
+        "policy": "CIS Ubuntu Linux 22.04 LTS Benchmark v2.0.0."
+      }
+    },
+    "rule": {
+      "cis_csc_v8": [
+        "3.3"
+      ],
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "2.2"
+      ],
+      "tsc": [
+        "CC7.1",
+        "CC7.2"
+      ],
+      "hipaa": [
+        "164.308(a)(3)(i)",
+        "164.308(a)(3)(ii)(A)",
+        "164.312(a)(1)"
+      ],
+      "nist_sp_800-53": [
+        "AC-5",
+        "AC-6"
+      ],
+      "description": "CIS Ubuntu Linux 22.04 LTS Benchmark v2.0.0.: Ensure permissions on /etc/shells are configured.",
+      "groups": [
+        "sca"
+      ],
+      "mitre_tactics": [
+        "TA0005"
+      ],
+      "mitre_techniques": [
+        "T1003",
+        "T1003.008",
+        "T1222",
+        "T1222.002"
+      ],
+      "cis": [
+        "7.1.9"
+      ],
+      "iso_27001-2013": [
+        "A.9.1.1"
+      ],
+      "nist_800_53": [
+        "CM.1"
+      ],
+      "mitre_mitigations": [
+        "M1022"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "firedtimes": 220,
+      "soc_2": [
+        "CC5.2",
+        "CC6.1"
+      ],
+      "id": "19007",
+      "cis_csc_v7": [
+        "14.6"
+      ]
+    },
+    "location": "sca",
+    "decoder": {
+      "name": "sca"
+    },
+    "id": "1756921222.1803596",
+    "timestamp": "2025-09-03T17:40:22.252+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-09-03T17:40:22.252Z"
+    ]
+  },
+  "sort": [
+    1756921222252
+  ]
+},
+
+{
+  "_index": "wazuh-alerts-4.x-2025.09.03",
+  "_id": "21K2EJkB34qfocTBfYTJ",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "data": {
+      "sca": {
+        "scan_id": "272806583",
+        "check": {
+          "result": "failed",
+          "remediation": "Run the following commands to remove excess permissions, set owner, and set group on /etc/security/opasswd and /etc/security/opasswd.old is they exist: # [ -e \"/etc/security/opasswd\" ] && chmod u-x,go-rwx /etc/security/opasswd # [ -e \"/etc/security/opasswd\" ] && chown root:root /etc/security/opasswd # [ -e \"/etc/security/opasswd.old\" ] && chmod u-x,go-rwx /etc/security/opasswd.old # [ -e \"/etc/security/opasswd.old\" ] && chown root:root /etc/security/opasswd.old.",
+          "compliance": {
+            "cis_csc_v8": "3.3",
+            "hipaa": "164.308(a)(3)(i),164.308(a)(3)(ii)(A),164.312(a)(1)",
+            "nist_sp_800-53": "AC-5,AC-6",
+            "mitre_tactics": "TA0005",
+            "mitre_techniques": "T1003,T1003.008,T1222,T1222.002",
+            "cis": "7.1.10",
+            "cmmc_v2": {
+              "0": "AC.L1-3.1.1,AC.L1-3.1.2,AC.L2-3.1.3,AC.L2-3.1.5,MP.L2-3.8.2"
+            },
+            "iso_27001-2013": "A.9.1.1",
+            "mitre_mitigations": "M1022",
+            "pci_dss_v4": {
+              "0": "1.3.1,7.1"
+            },
+            "soc_2": "CC5.2,CC6.1",
+            "pci_dss_v3": {
+              "2": {
+                "1": "7.1,7.1.1,7.1.2,7.1.3"
+              }
+            },
+            "cis_csc_v7": "14.6"
+          },
+          "description": "/etc/security/opasswd and it's backup /etc/security/opasswd.old hold user's previous passwords if pam_unix or pam_pwhistory is in use on the system.",
+          "id": "28751",
+          "title": "Ensure permissions on /etc/security/opasswd are configured.",
+          "rationale": "It is critical to ensure that /etc/security/opasswd is protected from unauthorized access. Although it is protected by default, the file permissions could be changed either inadvertently or through malicious actions.",
+          "command": [
+            "stat -Lc \"%n %a %u %U %g %G\" /etc/security/opasswds"
+          ]
+        },
+        "type": "check",
+        "policy": "CIS Ubuntu Linux 22.04 LTS Benchmark v2.0.0."
+      }
+    },
+    "rule": {
+      "cis_csc_v8": [
+        "3.3"
+      ],
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "2.2"
+      ],
+      "tsc": [
+        "CC7.1",
+        "CC7.2"
+      ],
+      "hipaa": [
+        "164.308(a)(3)(i)",
+        "164.308(a)(3)(ii)(A)",
+        "164.312(a)(1)"
+      ],
+      "nist_sp_800-53": [
+        "AC-5",
+        "AC-6"
+      ],
+      "description": "CIS Ubuntu Linux 22.04 LTS Benchmark v2.0.0.: Ensure permissions on /etc/security/opasswd are configured.",
+      "groups": [
+        "sca"
+      ],
+      "mitre_tactics": [
+        "TA0005"
+      ],
+      "mitre_techniques": [
+        "T1003",
+        "T1003.008",
+        "T1222",
+        "T1222.002"
+      ],
+      "cis": [
+        "7.1.10"
+      ],
+      "iso_27001-2013": [
+        "A.9.1.1"
+      ],
+      "nist_800_53": [
+        "CM.1"
+      ],
+      "mitre_mitigations": [
+        "M1022"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "firedtimes": 221,
+      "soc_2": [
+        "CC5.2",
+        "CC6.1"
+      ],
+      "id": "19007",
+      "cis_csc_v7": [
+        "14.6"
+      ]
+    },
+    "location": "sca",
+    "decoder": {
+      "name": "sca"
+    },
+    "id": "1756921222.1806864",
+    "timestamp": "2025-09-03T17:40:22.253+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-09-03T17:40:22.253Z"
+    ]
+  },
+  "sort": [
+    1756921222253
+  ]
+},
+
+{
+  "_index": "wazuh-alerts-4.x-2025.10.24",
+  "_id": "mYB9FJoBVd1JnwCrcJga",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "localhost.localdomain",
+      "timestamp": "Oct 24 04:32:29"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 5,
+      "pci_dss": [
+        "10.2.4",
+        "10.2.5"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "syslog: User authentication failure.",
+      "groups": [
+        "syslog",
+        "access_control",
+        "authentication_failed"
+      ],
+      "id": "2501",
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "gpg13": [
+        "7.8"
+      ],
+      "gdpr": [
+        "IV_35.7.d",
+        "IV_32.2"
+      ]
+    },
+    "location": "journald",
+    "decoder": {},
+    "id": "1761280350.215525",
+    "full_log": "Oct 24 04:32:29 localhost.localdomain gdm-password][3178]: pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=env-admin",
+    "timestamp": "2025-10-24T04:32:30.285+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-10-24T04:32:30.285Z"
+    ]
+  },
+  "sort": [
+    1761280350285
+  ]
+},
+
+
+
+
+{
+  "_index": "wazuh-alerts-4.x-2025.10.24",
+  "_id": "lIB8FJoBVd1JnwCrMZha",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "data": {
+      "extra_data": "localhost.localdomain->any"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 3,
+      "pci_dss": [
+        "10.6.1",
+        "10.2.6"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC7.2",
+        "CC7.3",
+        "CC6.8"
+      ],
+      "description": "Wazuh agent started.",
+      "groups": [
+        "ossec"
+      ],
+      "id": "503",
+      "nist_800_53": [
+        "AU.6",
+        "AU.14",
+        "AU.5"
+      ],
+      "gpg13": [
+        "10.1"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "location": "wazuh-agent",
+    "decoder": {
+      "parent": "ossec",
+      "name": "ossec"
+    },
+    "id": "1761280233.214804",
+    "full_log": "ossec: Agent started: 'localhost.localdomain->any'.",
+    "timestamp": "2025-10-24T04:30:33.704+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-10-24T04:30:33.704Z"
+    ]
+  },
+  "sort": [
+    1761280233704
+  ]
+},
+
+
+{
+  "_index": "wazuh-alerts-4.x-2025.10.02",
+  "_id": "cWUPppkBmqWxYCdHbaHl",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "localhost.localdomain",
+      "program_name": "sudo",
+      "timestamp": "Oct 02 17:54:07"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "data": {
+      "srcuser": "env-admin",
+      "uid": "1000",
+      "euid": "0",
+      "dstuser": "env-admin",
+      "tty": "/dev/pts/0"
+    },
+    "rule": {
+      "mail": false,
+      "level": 5,
+      "pci_dss": [
+        "10.2.4",
+        "10.2.5"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "PAM: User login failed.",
+      "groups": [
+        "pam",
+        "syslog",
+        "authentication_failed"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "gdpr": [
+        "IV_35.7.d",
+        "IV_32.2"
+      ],
+      "firedtimes": 1,
+      "mitre": {
+        "technique": [
+          "Password Guessing"
+        ],
+        "id": [
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ]
+      },
+      "id": "5503",
+      "gpg13": [
+        "7.8"
+      ]
+    },
+    "location": "journald",
+    "decoder": {
+      "name": "pam"
+    },
+    "id": "1759427649.2846606",
+    "full_log": "Oct 02 17:54:07 localhost.localdomain sudo[8352]: pam_unix(sudo:auth): authentication failure; logname= uid=1000 euid=0 tty=/dev/pts/0 ruser=env-admin rhost=  user=env-admin",
+    "timestamp": "2025-10-02T17:54:09.021+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2025-10-02T17:54:09.021Z"
+    ]
+  },
+  "sort": [
+    1759427649021
+  ]
+},
+
+
+
+{
+  "_index": "wazuh-alerts-4.x-2025.09.27",
+  "_id": "LUBuipkBIUdQN-GZOzPU",
+  "_score": null,
+  "_source": {
+    "syscheck": {
+      "uname_after": "root",
+      "mtime_after": "2025-08-31T20:26:10",
+      "size_after": "42",
+      "gid_after": "0",
+      "mode": "scheduled",
+      "path": "/etc/systemd/system/snapd.mounts.target.wants/snap-core20-1623.mount",
+      "sha1_after": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "gname_after": "root",
+      "uid_after": "0",
+      "perm_after": "rwxrwxrwx",
+      "event": "deleted",
+      "md5_after": "d41d8cd98f00b204e9800998ecf8427e",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "inode_after": 781232
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.1.103",
+      "name": "localhost.localdomain",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu22"
+    },
+    "rule": {
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "11.5"
+      ],
+      "hipaa": [
+        "164.312.c.1",
+        "164.312.c.2"
+      ],
+      "tsc": [
+        "PI1.4",
+        "PI1.5",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "File deleted.",
+      "groups": [
+        "ossec",
+        "syscheck",
+        "syscheck_entry_deleted",
+        "syscheck_file"
+      ],
+      "nist_800_53": [
+        "SI.7"
+      ],
+      "gdpr": [
+        "II_5.1.f"
+      ],
+      "firedtimes": 4,
+      "mitre": {
+        "technique": [
+          "File Deletion",
+          "Data Destruction"
+        ],
+        "id": [
+          "T1070.004",
+          "T1485"
+        ],
+        "tactic": [
+          "Defense Evasion",
+          "Impact"
+        ]
+      },
+      "id": "553",
+      "gpg13": [
+        "4.11"
+      ]
+    },
+    "location": "syscheck",
+    "decoder": {
+      "name": "syscheck_deleted"
+    },
+    "id": "1758964101.591531",
+    "full_log": "File '/etc/systemd/system/snapd.mounts.target.wants/snap-core20-1623.mount' deleted\nMode: scheduled\n",
+    "timestamp": "2025-09-27T09:08:21.502+0000"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2025-08-31T20:26:10.000Z"
+    ],
+    "timestamp": [
+      "2025-09-27T09:08:21.502Z"
+    ]
+  },
+  "sort": [
+    1758964101502
+  ]
+}
+
+
+
+]

