@@ -1,0 +1,328 @@
+{
+    "alert_0": {
+        "alert_description": "PAM: User changed password",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 87,
+            "interesting": 13
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 87,
+        "S_conf": 0.87,
+        "variation_count": 13,
+        "variation_rate": 0.13
+    },
+    "alert_1": {
+        "alert_description": "PAM: Login session closed",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_2": {
+        "alert_description": "PAM: Login session opened",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_3": {
+        "alert_description": "PAM: Login session closed",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_4": {
+        "alert_description": "PAM: Login session opened",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_5": {
+        "alert_description": "Integrity checksum changed for /etc/subuid",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_6": {
+        "alert_description": "CIS Ubuntu Linux 22.04 LTS Benchmark v2.0.0: Ensure a nftables table exists. Status changed from failed to passed",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_7": {
+        "alert_description": "New group added to the system",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_8": {
+        "alert_description": "Apparmor DENIED",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_9": {
+        "alert_description": "File added to the system",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_10": {
+        "alert_description": "Systemd service exited due to failure",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_11": {
+        "alert_description": "Successful sudo to ROOT executed",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_12": {
+        "alert_description": "New user added to the system",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_13": {
+        "alert_description": "SCA summary: CIS Ubuntu Linux 22.04 LTS Benchmark v2.0.0.: Score less than 50% (44)",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_14": {
+        "alert_description": "PAM: User changed password",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 18,
+            "not-interesting": 82
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 82,
+        "S_conf": 0.82,
+        "variation_count": 18,
+        "variation_rate": 0.18
+    },
+    "alert_15": {
+        "alert_description": "CVE-2023-28755 affecting ruby-rubygems was solved",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_16": {
+        "alert_description": "New dpkg installed",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_17": {
+        "alert_description": "Failed attempt to run sudo",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_18": {
+        "alert_description": "Successful sudo to ROOT executed",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_19": {
+        "alert_description": "Ensure permissions on /etc/shells are configured",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_20": {
+        "alert_description": "Successful sudo to ROOT executed",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_21": {
+        "alert_description": "Ensure permissions on /etc/shells are configured",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_22": {
+        "alert_description": "Ensure permissions on /etc/security/opasswd are configured",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_23": {
+        "alert_description": "User authentication failure",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_24": {
+        "alert_description": "Wazuh agent started",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_25": {
+        "alert_description": "PAM: User login failed",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_26": {
+        "alert_description": "File '/etc/systemd/system/snapd.mounts.target.wants/snap-core20-1623.mount' deleted",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    }
+}

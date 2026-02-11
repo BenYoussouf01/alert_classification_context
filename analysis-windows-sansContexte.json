@@ -1,0 +1,483 @@
+{
+    "alert_0": {
+        "alert_description": "Windows Logon Success",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 2,
+            "not-interesting": 98
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 98,
+        "S_conf": 0.98,
+        "variation_count": 2,
+        "variation_rate": 0.02
+    },
+    "alert_1": {
+        "alert_description": "Powershell process spawned Windows command shell instance",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_2": {
+        "alert_description": "Service startup type was changed",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_3": {
+        "alert_description": "Software protection service scheduled successfully",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_4": {
+        "alert_description": "Suspicious Windows cmd shell execution",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_5": {
+        "alert_description": "Powershell process created an executable file in Windows root folder",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_6": {
+        "alert_description": "Executable file dropped in folder commonly used by malware",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_7": {
+        "alert_description": "Windows command prompt started by an abnormal process",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_8": {
+        "alert_description": "Powershell used to delete files or directories",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_9": {
+        "alert_description": "Value added to registry key has Base64-like pattern",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_10": {
+        "alert_description": "PowerShell created a new scripting file under User data folder",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_11": {
+        "alert_description": "Sysmon - Suspicious Process - lsm.exe",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_12": {
+        "alert_description": "Registry Value Entry Added to the System",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_13": {
+        "alert_description": "Application Compatibility Database launched",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_14": {
+        "alert_description": "Registry Key Integrity Checksum Changed",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_15": {
+        "alert_description": "Discovery activity executed",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_16": {
+        "alert_description": "Command shell started script with /c modifier",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_17": {
+        "alert_description": "Executable dropped in Windows root folder",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_18": {
+        "alert_description": "Windows backup and restore tool sdclt.exe launched via C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\WindowsPowerShell\\\\\\\\v1.0\\\\\\\\powershell.exe with High integrity level",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_19": {
+        "alert_description": "Powershell process invoked known auto-elevated utility ComputerDefaults.EXE, may have been used to bypass UAC",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_20": {
+        "alert_description": "Command interpreter added to registry key associated to UAC bypass by auto-elevated processes",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_21": {
+        "alert_description": "Powershell process invoked known auto-elevated utility ComputerDefaults.EXE, may have been used to bypass UAC",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_22": {
+        "alert_description": "Powershell.exe spawned a powershell process which executed a base64 encoded command",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_23": {
+        "alert_description": "Powershell script compiling code using CSC.exe, possible malware drop",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_24": {
+        "alert_description": "Sysmon - Suspicious Process - lsass",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_25": {
+        "alert_description": "Executable file dropped in Users\\Public folder",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_26": {
+        "alert_description": "Powershell process created executable file in AppData temp folder",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_27": {
+        "alert_description": "License activation (slui.exe) failed",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_28": {
+        "alert_description": "Registry Key Integrity Checksum Changed",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_29": {
+        "alert_description": "Registry Value Entry Deleted",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_30": {
+        "alert_description": "Net.exe account discovery command initiated",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_31": {
+        "alert_description": "Windows Error Reporting Event",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_32": {
+        "alert_description": "Non service account logged off",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_33": {
+        "alert_description": "Windows Workstation Logon Success",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_34": {
+        "alert_description": "Logon Failure - Unknown user or bad password",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_35": {
+        "alert_description": "Special privileges assigned to new logon",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_36": {
+        "alert_description": "Logon Failure - Unknown user or bad password",
+        "total_runs": 100,
+        "decision_distribution": {
+            "interesting": 100
+        },
+        "most_common_decision": "interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_37": {
+        "alert_description": "Software protection service scheduled successfully",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_38": {
+        "alert_description": "Discovery activity executed",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    },
+    "alert_39": {
+        "alert_description": "VSS service shutting down due to idle timeout",
+        "total_runs": 100,
+        "decision_distribution": {
+            "not-interesting": 100
+        },
+        "most_common_decision": "not-interesting",
+        "frequency": 100,
+        "S_conf": 1.0,
+        "variation_count": 0,
+        "variation_rate": 0.0
+    }
+}
