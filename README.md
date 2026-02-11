@@ -1,4 +1,4 @@
-# NVTESTE2 — SOC Alert Triage Experiments
+# SOC Alert Triage Experiments
 
 Ce dépôt contient des scripts pour évaluer la stabilité des décisions de triage SOC (interesting / not‑interesting) à partir d’alertes SIEM JSON, avec et sans contexte métier.
 
